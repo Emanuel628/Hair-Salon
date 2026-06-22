@@ -22,6 +22,7 @@
     <link rel="preload" href="assets/stylist-body-placeholder.svg" as="image" />
     <link rel="preload" href="assets/stylist-mobile-base.svg" as="image" media="(max-width: 900px)" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reviews-carousel.css" />
     <link rel="stylesheet" href="pc-view.css" />
     <script src="app.js" defer></script>
   </head>
@@ -80,10 +81,29 @@
               <img src="assets/balayage-thumbnail.svg" alt="Dimensional brunette balayage hair waves" />
             </article>
 
-            <aside class="testimonial" aria-label="Client testimonial">
-              <div class="stars" aria-label="5 star rating">★★★★★</div>
-              <blockquote>“I’ve never felt more confident. She just gets it.”</blockquote>
-              <p class="testimonial__name">– Jessica R.</p>
+            <aside class="testimonial" aria-label="Client reviews" data-review-carousel>
+              <div class="review-slider">
+                <article class="review-slide is-active" data-review-slide>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <blockquote>“I’ve never felt more confident. She just gets it.”</blockquote>
+                  <p class="testimonial__name">– Jessica R.</p>
+                </article>
+                <article class="review-slide" data-review-slide>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <blockquote>“The color looks soft, expensive, and completely natural.”</blockquote>
+                  <p class="testimonial__name">– Marisol A.</p>
+                </article>
+                <article class="review-slide" data-review-slide>
+                  <div class="stars" aria-label="5 star rating">★★★★★</div>
+                  <blockquote>“My blowout lasted for days. I’m obsessed.”</blockquote>
+                  <p class="testimonial__name">– Kayla M.</p>
+                </article>
+              </div>
+              <div class="review-dots" aria-hidden="true">
+                <span class="review-dot is-active" data-review-dot></span>
+                <span class="review-dot" data-review-dot></span>
+                <span class="review-dot" data-review-dot></span>
+              </div>
             </aside>
 
             <section class="featured-services" aria-labelledby="featured-title">
