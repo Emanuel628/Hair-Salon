@@ -102,9 +102,11 @@ button { font: inherit; }
 .visual-column[data-pointing-mode="connector"] .service-arc__path, .visual-column[data-pointing-mode="connector"] .mobile-service-arc__path { stroke: var(--color-accent); opacity: 1; filter: drop-shadow(0 0 6px rgba(189,115,95,.26)); }
 .visual-column[data-pointing-mode="arm"] .service-arc__path, .visual-column[data-pointing-mode="arm"] .mobile-service-arc__path { stroke: var(--color-accent-soft); opacity: .82; filter: none; }
 
-.service-arc { position: absolute; z-index: 2; right: clamp(52px, 7cqw, 104px); top: clamp(28px, 6vh, 58px); width: min(72%, 660px); height: calc(100% - 76px); color: var(--color-accent-soft); overflow: visible; }
+.service-arc { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; color: var(--color-accent-soft); overflow: visible; }
 .service-arc__path, .mobile-service-arc__path { fill: none; stroke: currentColor; stroke-width: 2; opacity: .82; }
+.service-arc__path { vector-effect: non-scaling-stroke; }
 .service-arc circle, .mobile-service-arc circle { fill: var(--color-accent-soft); stroke: rgba(255,255,255,.72); stroke-width: 2; }
+.service-arc circle { vector-effect: non-scaling-stroke; }
 .service-node { --node-size: clamp(58px, 6cqw, 76px); position: absolute; z-index: 6; left: var(--x); top: var(--y); transform: translate(-50%, -50%); display: flex; align-items: center; gap: 16px; min-width: max-content; }
 .service-node button, .mobile-node button { border: 0; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.93); color: var(--color-text); box-shadow: var(--shadow-soft); cursor: pointer; touch-action: manipulation; transition: transform 180ms ease, box-shadow 180ms ease, color 180ms ease; }
 .service-node button { width: var(--node-size); height: var(--node-size); }
@@ -115,7 +117,7 @@ button { font: inherit; }
 .service-node--active button, .mobile-node--active button { outline: 8px solid rgba(189,115,95,.18); }
 .service-node--active span { color: var(--color-accent); font-family: var(--font-display); font-size: clamp(1.55rem, 2cqw, 2.15rem); font-weight: 700; }
 
-.service-card { position: absolute; z-index: 7; left: clamp(280px, 38cqw, 440px); top: 39%; width: clamp(230px, 24cqw, 306px); min-width: 0; padding: clamp(24px, 3cqw, 34px); border-radius: 24px; background: rgba(255,253,249,.88); box-shadow: var(--shadow-card); backdrop-filter: blur(16px); }
+.service-card { position: absolute; z-index: 7; left: 48%; top: 46%; transform: translate(-50%, -50%); width: clamp(230px, 26cqw, 300px); min-width: 0; padding: clamp(24px, 3cqw, 34px); border-radius: 24px; background: rgba(255,253,249,.88); box-shadow: var(--shadow-card); backdrop-filter: blur(16px); }
 .service-card p:first-child { margin: 0 0 12px; color: var(--color-accent); font-size: .74rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; }
 .service-card h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 4.2cqw, 4.1rem); line-height: .92; font-weight: 600; letter-spacing: -.06em; overflow-wrap: anywhere; }
 .title-rule--card { margin: 18px 0 16px; width: 48px; }
