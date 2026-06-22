@@ -42,6 +42,7 @@ The homepage should include:
 - Service semi-circle
 - Guide photo
 - Service detail card
+- Footer with a subtle Admin link route placeholder
 - Mobile version of the same concept
 
 ### 2. Desktop Experience
@@ -138,17 +139,52 @@ V1 must include:
 - No large uncompressed photography
 - Lazy-loaded non-critical images
 
+### 10. Footer Admin Link Placeholder
+
+The public footer should include a subtle **Admin** link.
+
+Recommended route:
+
+```txt
+/admin/sign-in
+```
+
+The link should be small, accessible, and unobtrusive. It should not interfere with the customer booking funnel.
+
+## Planned Post-MVP Admin Flow
+
+The full admin system is planned after the public prototype unless specifically prioritized earlier.
+
+Planned routes:
+
+```txt
+/admin/sign-in
+/admin/register
+/admin/home
+```
+
+Flow:
+
+```txt
+Footer Admin Link → Sign In Page → Admin Home Screen
+Sign In Page → Register Page
+```
+
+The owner Home Screen should allow controlled editing of public site content, including words, titles, service descriptions, booking links, photos, captions, and alt text.
+
+The admin system must be structured and intentional, not vibe-code style.
+
+See `docs/ADMIN_CONTENT_MANAGEMENT.md` for the full admin plan.
+
 ## V1 Should Not Include
 
-Do not add these yet:
+Do not add these full systems yet unless specifically prioritized:
 
-- User login
-- Admin dashboard
-- Database
+- Full admin dashboard
+- Database-backed CMS
 - Custom booking calendar
 - Payment processing
 - Multi-salon account system
-- CMS
 - Blog
 - Complex animations
 - Chatbot
@@ -196,6 +232,7 @@ The V1 prototype succeeds if:
 - The service arc is usable and visually accurate.
 - Tapping/hovering services clearly updates the page.
 - The booking action is obvious.
+- The footer has a subtle Admin link placeholder.
 - The site feels like something Mejor Tech can show as a premium concept.
 
 ## Build Priority
@@ -210,9 +247,10 @@ Recommended order:
 6. Desktop service arc
 7. Service detail state updates
 8. Mobile tap behavior
-9. Accessibility pass
-10. Image optimization pass
-11. Final visual polish against both approved references
+9. Footer Admin link placeholder
+10. Accessibility pass
+11. Image optimization pass
+12. Final visual polish against both approved references
 
 ## Final Rule
 
