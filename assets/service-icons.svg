@@ -1,42 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <symbol id="icon-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="6" cy="6" r="2.5"/>
-    <circle cx="6" cy="18" r="2.5"/>
-    <path d="M8 8l12 12"/>
-    <path d="M8 16L20 4"/>
+  <!-- Cut: open salon shears with finger loops, crossed blades and a pivot rivet -->
+  <symbol id="icon-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6.1" cy="7" r="2.5"/>
+    <circle cx="6.1" cy="17" r="2.5"/>
+    <path d="M8.4 8.2C12 10 16 12 20.6 15.6"/>
+    <path d="M8.4 15.8C12 14 16 12 20.6 8.4"/>
+    <circle cx="12.1" cy="12" r="0.65" fill="currentColor" stroke="none"/>
   </symbol>
 
-  <symbol id="icon-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M14.5 4.5l5 5-9.8 9.8a3.5 3.5 0 0 1-5-5L14.5 4.5z"/>
-    <path d="M13 6l5 5"/>
-    <path d="M5.5 18.5l-2 2"/>
+  <!-- Color: tint brush with ferrule band and a soft loaded tip -->
+  <symbol id="icon-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 4.6a2.4 2.4 0 0 0-3.4 0l-6.1 6.1 3.4 3.4 6.1-6.1a2.4 2.4 0 0 0 0-3.4z"/>
+    <path d="M13.2 13.3 10 10.1"/>
+    <path d="M10.4 10.7c-2.5 1-4.4 2.6-5 5.4-.3 1.5 0 2.6 0 2.6s1.2.3 2.7 0c2.8-.6 4.3-2.6 5.2-5.1"/>
+    <circle cx="7.2" cy="16.4" r="0.6" fill="currentColor" stroke="none"/>
   </symbol>
 
-  <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
-    <path d="M19 15l.9 2.5L22 18.4l-2.1.8L19 22l-.9-2.8-2.1-.8 2.1-.9L19 15z"/>
-    <path d="M5 2l.7 2L8 5l-2.3.8L5 8l-.7-2.2L2 5l2.3-1L5 2z"/>
+  <!-- Balayage: four-point shine with concave facets, plus a small twin sparkle -->
+  <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11.5 3.2c.5 4 1.6 5.1 5.6 5.6-4 .5-5.1 1.6-5.6 5.6-.5-4-1.6-5.1-5.6-5.6 4-.5 5.1-1.6 5.6-5.6z"/>
+    <path d="M18 13.4c.25 2.1.85 2.7 3 2.95-2.15.25-2.75.85-3 2.95-.25-2.1-.85-2.7-3-2.95 2.15-.25 2.75-.85 3-2.95z"/>
+    <circle cx="6.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
   </symbol>
 
-  <symbol id="icon-dryer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 9.5c0-2 1.5-3.5 3.5-3.5H19v7H7.5C5.5 13 4 11.5 4 9.5z"/>
-    <path d="M19 7l3-1v8l-3-1"/>
-    <path d="M10 13l2 7h3l-1.6-7"/>
-    <path d="M7 9.5h.1"/>
+  <!-- Blowout: hair dryer with barrel, round vent, handle and airflow curls -->
+  <symbol id="icon-dryer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15.5 5a5.5 5.5 0 0 1 0 11l-8.7-1.5a3 3 0 0 1 0-8z"/>
+    <path d="M6.8 7.7v8.1"/>
+    <path d="M9.8 14.7l1 4.3h2.5l-.8-4.9"/>
+    <circle cx="13" cy="10.5" r="1.9"/>
+    <path d="M3.4 8.3q1.4 1.2 0 3.4"/>
   </symbol>
 
-  <symbol id="icon-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M7 3c-2 2.6-2 5.4 0 8s2 5.4 0 8"/>
-    <path d="M12 3c-2 2.6-2 5.4 0 8s2 5.4 0 8"/>
-    <path d="M17 3c-2 2.6-2 5.4 0 8s2 5.4 0 8"/>
+  <!-- Extensions: three flowing strands of hair -->
+  <symbol id="icon-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.2 3.5C3.3 6.6 9.1 9 6.2 12.2 3.3 15.4 9.1 17.6 6.2 20.5"/>
+    <path d="M12 3.5C9.1 6.6 14.9 9 12 12.2 9.1 15.4 14.9 17.6 12 20.5"/>
+    <path d="M17.8 3.5C14.9 6.6 20.7 9 17.8 12.2 14.9 15.4 20.7 17.6 17.8 20.5"/>
   </symbol>
 
-  <symbol id="icon-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M9 4h6l-2 4h-2L9 4z"/>
-    <circle cx="12" cy="15" r="5.5"/>
+  <!-- Bridal Hair: solitaire ring with faceted diamond and a sparkle -->
+  <symbol id="icon-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="15.2" r="5"/>
+    <path d="M8.7 8.2 12 4.3l3.3 3.9L12 10.6z"/>
+    <path d="M8.7 8.2h6.6"/>
+    <path d="M10.6 8.2 12 4.3l1.4 3.9"/>
+    <path d="M18.7 4.2l.45 1.25L20.4 5.9l-1.25.45L18.7 7.6l-.45-1.25L17 5.9l1.25-.45z" fill="currentColor" stroke="none"/>
   </symbol>
 
-  <symbol id="icon-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 3s7 7.1 7 12a7 7 0 0 1-14 0c0-4.9 7-12 7-12z"/>
+  <!-- Treatments: glossy serum droplet with a shine highlight -->
+  <symbol id="icon-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3.4c0 0 6.6 6.3 6.6 11a6.6 6.6 0 0 1-13.2 0c0-4.7 6.6-11 6.6-11z"/>
+    <path d="M8.7 15.1a3.3 3.3 0 0 0 2.4 3.2"/>
+    <circle cx="15.2" cy="7.4" r="0.7" fill="currentColor" stroke="none"/>
   </symbol>
 </svg>
