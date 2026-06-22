@@ -125,24 +125,18 @@
         </section>
 
         <section class="visual-column" aria-labelledby="services-title">
-          <div class="visual-stage">
+          <div class="visual-stage visual-stage--desktop">
             <div class="salon-backdrop" aria-hidden="true">
               <div class="salon-backdrop__mirror"></div>
               <div class="salon-backdrop__chair"></div>
               <div class="salon-backdrop__shelf"></div>
             </div>
 
-            <picture class="stylist-picture">
-              <source
-                media="(max-width: 900px)"
-                srcset="assets/stylist-mobile-placeholder.svg"
-              />
-              <img
-                class="stylist-guide"
-                src="assets/stylist-placeholder.svg"
-                alt="Salon stylist standing and pointing toward the selected service"
-              />
-            </picture>
+            <img
+              class="stylist-guide"
+              src="assets/stylist-placeholder.svg"
+              alt="Salon stylist standing and pointing toward the selected service"
+            />
 
             <svg class="service-arc" viewBox="0 0 620 720" aria-hidden="true">
               <path
@@ -206,11 +200,6 @@
               <span>Treatments</span>
             </div>
 
-            <p class="tap-note" aria-hidden="true">
-              <span>Tap a service</span>
-              <span>to update details</span>
-            </p>
-
             <article id="services-title" class="service-card" aria-label="Featured service">
               <p>Featured Service</p>
               <h2>Balayage</h2>
@@ -227,6 +216,80 @@
             <p class="hover-note" aria-hidden="true">
               Hover any<br />service to see<br />details update
             </p>
+          </div>
+
+          <div class="mobile-arc-stage" aria-label="Tap a service to update details">
+            <svg class="mobile-service-arc" viewBox="0 0 390 310" aria-hidden="true">
+              <path
+                class="mobile-service-arc__path"
+                d="M34 222 C64 78 326 78 356 222"
+              />
+              <circle cx="92" cy="139" r="4" />
+              <circle cx="195" cy="82" r="4" />
+              <circle cx="298" cy="139" r="4" />
+              <circle cx="45" cy="220" r="4" />
+              <circle cx="345" cy="220" r="4" />
+            </svg>
+
+            <div class="mobile-node mobile-node--cut">
+              <button type="button" aria-label="View Cut details">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg>
+              </button>
+              <span>Cut</span>
+            </div>
+
+            <div class="mobile-node mobile-node--active mobile-node--balayage">
+              <button type="button" aria-label="View Balayage details" aria-pressed="true">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-sparkle"></use></svg>
+              </button>
+              <span>Balayage</span>
+            </div>
+
+            <div class="mobile-node mobile-node--blowout">
+              <button type="button" aria-label="View Blowout details">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-dryer"></use></svg>
+              </button>
+              <span>Blowout</span>
+            </div>
+
+            <div class="mobile-node mobile-node--color">
+              <button type="button" aria-label="View Color details">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg>
+              </button>
+              <span>Color</span>
+            </div>
+
+            <div class="mobile-node mobile-node--extensions">
+              <button type="button" aria-label="View Extensions details">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg>
+              </button>
+              <span>Extensions</span>
+            </div>
+
+            <div class="mobile-node mobile-node--treatments">
+              <button type="button" aria-label="View Treatments details">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg>
+              </button>
+              <span>Treatments</span>
+            </div>
+
+            <div class="mobile-node mobile-node--bridal">
+              <button type="button" aria-label="View Bridal Hair details">
+                <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-ring"></use></svg>
+              </button>
+              <span>Bridal Hair</span>
+            </div>
+
+            <p class="tap-note" aria-hidden="true">
+              <span>Tap a service</span>
+              <span>to update details</span>
+            </p>
+
+            <img
+              class="mobile-stylist-guide"
+              src="assets/stylist-mobile-placeholder.svg"
+              alt="Salon stylist upper torso pointing upward toward the selected service"
+            />
           </div>
         </section>
       </main>
