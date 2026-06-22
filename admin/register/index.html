@@ -53,13 +53,7 @@
             </div>
 
             <div class="form-field">
-              <div class="password-row">
-                <label for="password">Password</label>
-                <label class="show-password" for="show-register-password">
-                  <input id="show-register-password" type="checkbox" data-show-password="password" />
-                  <span>Show password</span>
-                </label>
-              </div>
+              <label for="password">Password</label>
               <input
                 id="password"
                 name="password"
@@ -70,6 +64,10 @@
                 title="Use at least 8 characters with one capital letter, one number, and one special character."
                 required
               />
+              <label class="show-password" for="show-register-password">
+                <input id="show-register-password" type="checkbox" data-show-password="password" />
+                <span>Show password</span>
+              </label>
               <p class="form-help">
                 Must include at least 8 characters, one capital letter, one number, and one special character.
               </p>
