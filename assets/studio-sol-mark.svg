@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 70" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Studio Sol sun mark</title>
+  <desc id="desc">A minimal half-sun line mark for Studio Sol.</desc>
+  <path d="M22 52h76" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M38 52c3.5-16.5 12.6-26.2 22-26.2S78.5 35.5 82 52" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M60 4v14" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M35 15l8.5 11" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M85 15l-8.5 11" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M18 34l13 5" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M102 34l-13 5" stroke="#BD735F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M47 9l4.5 13" stroke="#BD735F" stroke-width="2.6" stroke-linecap="round" opacity=".78"/>
+  <path d="M73 9l-4.5 13" stroke="#BD735F" stroke-width="2.6" stroke-linecap="round" opacity=".78"/>
+  <path d="M25 24l11 8" stroke="#BD735F" stroke-width="2.6" stroke-linecap="round" opacity=".78"/>
+  <path d="M95 24l-11 8" stroke="#BD735F" stroke-width="2.6" stroke-linecap="round" opacity=".78"/>
+</svg>
