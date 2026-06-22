@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Studio Sol admin content editor." />
+    <title>Admin Home | Studio Sol</title>
+
+    <script>
+      if (new URLSearchParams(window.location.search).get("view") === "desktop") {
+        document.documentElement.classList.add("pc-view");
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/admin.css" />
+    <script src="/admin.js" defer></script>
+  </head>
+
+  <body class="admin-page">
+    <div class="admin-shell">
+      <header class="admin-header" aria-label="Admin navigation">
+        <a class="brand" href="/" aria-label="Back to Studio Sol home">
+          <img src="/assets/studio-sol-mark.svg" alt="" class="brand__mark" />
+          <span class="brand__name">Studio Sol</span>
+        </a>
+
+        <div class="admin-header__actions">
+          <a class="button button--secondary" href="/">View Site</a>
+        </div>
+      </header>
+
+      <main class="admin-main" aria-labelledby="admin-title">
+        <div class="admin-layout">
+          <aside class="admin-sidebar" aria-label="Admin sections">
+            <p class="admin-kicker">Owner Home</p>
+            <h1 id="admin-title">Admin.</h1>
+            <p class="admin-sidebar__copy">
+              Edit public website content without touching the layout code.
+            </p>
+
+            <nav class="admin-nav" aria-label="Admin navigation">
+              <div>
+                <p class="admin-nav__group-title">Main</p>
+                <button class="admin-nav__link admin-nav__link--active" type="button" aria-pressed="true">
+                  <span>Site Content</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+
+              <div>
+                <p class="admin-nav__group-title">Site Pages</p>
+                <div class="admin-page-list">
+                  <button class="admin-page-link is-active" type="button" data-admin-page="landing" aria-pressed="true">
+                    <span>Landing Page</span>
+                    <span aria-hidden="true">01</span>
+                  </button>
+                  <button class="admin-page-link" type="button" data-admin-page="services" aria-pressed="false">
+                    <span>Services</span>
+                    <span aria-hidden="true">02</span>
+                  </button>
+                  <button class="admin-page-link" type="button" data-admin-page="images" aria-pressed="false">
+                    <span>Pictures</span>
+                    <span aria-hidden="true">03</span>
+                  </button>
+                  <button class="admin-page-link" type="button" data-admin-page="footer" aria-pressed="false">
+                    <span>Footer</span>
+                    <span aria-hidden="true">04</span>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </aside>
+
+          <section class="admin-panel" aria-label="Editable site content">
+            <div class="admin-panel__header">
+              <div>
+                <p class="admin-kicker">Site Content</p>
+                <h1>Content editor.</h1>
+                <p class="admin-panel__copy">
+                  This is the first admin screen. For now it is a clean front-end structure for editing page words, titles, images, captions, alt text, and booking copy.
+                </p>
+              </div>
+              <span class="admin-status-pill">Draft only</span>
+            </div>
+
+            <form action="#" method="post">
+              <div class="admin-content-page is-active" data-admin-content="landing">
+                <section class="admin-section">
+                  <h2>Landing hero</h2>
+                  <p class="admin-section__copy">
+                    Main page content shown in the left column of the public landing page.
+                  </p>
+
+                  <div class="admin-form-grid">
+                    <div class="admin-field">
+                      <label for="hero-eyebrow">Eyebrow</label>
+                      <input id="hero-eyebrow" name="heroEyebrow" type="text" value="Luxury Hair. Personal Touch." />
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="hero-title">Hero title</label>
+                      <input id="hero-title" name="heroTitle" type="text" value="Hair that feels like you." />
+                    </div>
+
+                    <div class="admin-field admin-field--full">
+                      <label for="hero-copy">Hero text</label>
+                      <textarea id="hero-copy" name="heroCopy">Custom cuts, lived-in color, balayage, and effortless styling—crafted around you. Because when your hair feels like you, you walk a little taller.</textarea>
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="primary-cta">Primary button text</label>
+                      <input id="primary-cta" name="primaryCta" type="text" value="Book Appointment" />
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="secondary-cta">Secondary button text</label>
+                      <input id="secondary-cta" name="secondaryCta" type="text" value="View Services" />
+                    </div>
+                  </div>
+                </section>
+
+                <section class="admin-section">
+                  <h2>Testimonial</h2>
+                  <p class="admin-section__copy">
+                    Simple social proof card shown under the hero buttons on desktop.
+                  </p>
+
+                  <div class="admin-form-grid">
+                    <div class="admin-field admin-field--full">
+                      <label for="testimonial-text">Testimonial text</label>
+                      <textarea id="testimonial-text" name="testimonialText">I’ve never felt more confident. She just gets it.</textarea>
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="testimonial-name">Client name</label>
+                      <input id="testimonial-name" name="testimonialName" type="text" value="Jessica R." />
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="testimonial-rating">Rating</label>
+                      <select id="testimonial-rating" name="testimonialRating">
+                        <option selected>5 stars</option>
+                        <option>4 stars</option>
+                        <option>3 stars</option>
+                      </select>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="admin-content-page" data-admin-content="services">
+                <section class="admin-section">
+                  <h2>Service categories</h2>
+                  <p class="admin-section__copy">
+                    These labels appear in the top navigation of the public site.
+                  </p>
+
+                  <div class="admin-form-grid">
+                    <div class="admin-field"><label for="cat-1">Category 1</label><input id="cat-1" type="text" value="Hair" /></div>
+                    <div class="admin-field"><label for="cat-2">Category 2</label><input id="cat-2" type="text" value="Nails" /></div>
+                    <div class="admin-field"><label for="cat-3">Category 3</label><input id="cat-3" type="text" value="Massage" /></div>
+                    <div class="admin-field"><label for="cat-4">Category 4</label><input id="cat-4" type="text" value="Brows" /></div>
+                    <div class="admin-field"><label for="cat-5">Category 5</label><input id="cat-5" type="text" value="Lashes" /></div>
+                    <div class="admin-field"><label for="cat-6">Category 6</label><input id="cat-6" type="text" value="Bridal" /></div>
+                  </div>
+                </section>
+
+                <section class="admin-section">
+                  <h2>Featured service</h2>
+                  <p class="admin-section__copy">
+                    This controls the default active service card.
+                  </p>
+
+                  <div class="admin-form-grid">
+                    <div class="admin-field">
+                      <label for="service-title">Service title</label>
+                      <input id="service-title" name="serviceTitle" type="text" value="Balayage" />
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="service-cta">Booking button</label>
+                      <input id="service-cta" name="serviceCta" type="text" value="Book Balayage" />
+                    </div>
+
+                    <div class="admin-field admin-field--full">
+                      <label for="service-description">Service description</label>
+                      <textarea id="service-description" name="serviceDescription">Soft, dimensional color for a bright, natural finish.</textarea>
+                    </div>
+
+                    <div class="admin-field admin-field--full">
+                      <label for="booking-link">Booking link</label>
+                      <input id="booking-link" name="bookingLink" type="url" value="#book-balayage" />
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="admin-content-page" data-admin-content="images">
+                <section class="admin-section">
+                  <h2>Pictures and captions</h2>
+                  <p class="admin-section__copy">
+                    Images can be uploaded with captions and alt text. This keeps photos structured instead of random uploads.
+                  </p>
+
+                  <div class="admin-form-grid admin-form-grid--single">
+                    <article class="image-editor-card">
+                      <div class="image-editor-card__preview" aria-hidden="true">S</div>
+                      <div class="admin-form-grid">
+                        <div class="admin-field admin-field--full">
+                          <label for="stylist-photo">Stylist photo</label>
+                          <input id="stylist-photo" name="stylistPhoto" type="file" accept="image/*" />
+                          <p class="admin-help">Use one locked-off showcase image or a normal owner upload with connector fallback.</p>
+                        </div>
+                        <div class="admin-field">
+                          <label for="stylist-caption">Caption</label>
+                          <input id="stylist-caption" name="stylistCaption" type="text" value="Owner and lead stylist" />
+                        </div>
+                        <div class="admin-field">
+                          <label for="stylist-alt">Alt text</label>
+                          <input id="stylist-alt" name="stylistAlt" type="text" value="Salon stylist pointing toward featured services" />
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="image-editor-card">
+                      <div class="image-editor-card__preview" aria-hidden="true">B</div>
+                      <div class="admin-form-grid">
+                        <div class="admin-field admin-field--full">
+                          <label for="balayage-photo">Balayage thumbnail</label>
+                          <input id="balayage-photo" name="balayagePhoto" type="file" accept="image/*" />
+                        </div>
+                        <div class="admin-field">
+                          <label for="balayage-caption">Caption</label>
+                          <input id="balayage-caption" name="balayageCaption" type="text" value="Dimensional brunette balayage" />
+                        </div>
+                        <div class="admin-field">
+                          <label for="balayage-alt">Alt text</label>
+                          <input id="balayage-alt" name="balayageAlt" type="text" value="Dimensional brunette balayage hair waves" />
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+              </div>
+
+              <div class="admin-content-page" data-admin-content="footer">
+                <section class="admin-section">
+                  <h2>Footer content</h2>
+                  <p class="admin-section__copy">
+                    Keep the footer simple and unobtrusive so it does not distract from booking.
+                  </p>
+
+                  <div class="admin-form-grid">
+                    <div class="admin-field admin-field--full">
+                      <label for="footer-line">Footer line</label>
+                      <input id="footer-line" name="footerLine" type="text" value="© Studio Sol. Concept by Mejor Tech." />
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="admin-link-label">Admin link label</label>
+                      <input id="admin-link-label" name="adminLinkLabel" type="text" value="Admin" />
+                    </div>
+
+                    <div class="admin-field">
+                      <label for="desktop-link-label">Desktop view label</label>
+                      <input id="desktop-link-label" name="desktopLinkLabel" type="text" value="Desktop View" />
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="admin-actions">
+                <button class="button button--ghost" type="button">Preview Changes</button>
+                <button class="button button--primary" type="submit">Save Draft</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer auth-footer">
+        <p>© Studio Sol. Concept by Mejor Tech.</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="/admin/home/?view=desktop">Desktop View</a>
+          <a href="/admin/sign-in/">Admin</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
