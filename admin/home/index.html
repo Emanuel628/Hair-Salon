@@ -57,7 +57,11 @@
               <div>
                 <p class="admin-nav__group-title">Site Pages</p>
                 <div class="admin-page-list">
-                  <button class="admin-page-link is-active" type="button" data-admin-page="landing" aria-pressed="true">
+                  <button class="admin-page-link is-active" type="button" data-admin-page="global" aria-pressed="true">
+                    <span>Global Branding</span>
+                    <span aria-hidden="true">00</span>
+                  </button>
+                  <button class="admin-page-link" type="button" data-admin-page="landing" aria-pressed="false">
                     <span>Landing Page</span>
                     <span aria-hidden="true">01</span>
                   </button>
@@ -84,14 +88,82 @@
                 <p class="admin-kicker">Site Content</p>
                 <h1>Content editor.</h1>
                 <p class="admin-panel__copy">
-                  This is the first admin screen. For now it is a clean front-end structure for editing page words, titles, images, captions, alt text, and booking copy.
+                  This is the first admin screen. For now it is a clean front-end structure for editing page words, titles, images, captions, alt text, booking copy, and global branding.
                 </p>
               </div>
               <span class="admin-status-pill">Draft only</span>
             </div>
 
-            <form action="#" method="post">
-              <div class="admin-content-page is-active" data-admin-content="landing">
+            <form action="#" method="post" enctype="multipart/form-data">
+              <div class="admin-content-page is-active" data-admin-content="global">
+                <section class="admin-section">
+                  <h2>Global logo</h2>
+                  <p class="admin-section__copy">
+                    This logo is global. Changing it here will control the public header logo, mobile header logo, admin header logo, and any future global brand mark placements.
+                  </p>
+
+                  <div class="admin-form-grid admin-form-grid--single">
+                    <article class="image-editor-card">
+                      <div class="image-editor-card__preview" aria-hidden="true">
+                        <img src="/assets/studio-sol-mark.svg" alt="" style="width: 58px; height: 58px;" />
+                      </div>
+                      <div class="admin-form-grid">
+                        <div class="admin-field admin-field--full">
+                          <label for="global-logo">Upload logo</label>
+                          <input id="global-logo" name="globalLogo" type="file" accept="image/svg+xml,image/png,image/jpeg,image/webp" />
+                          <p class="admin-help">Recommended: SVG or transparent PNG. Keep it clean, readable, and usable on light backgrounds.</p>
+                        </div>
+
+                        <div class="admin-field">
+                          <label for="brand-name">Brand name</label>
+                          <input id="brand-name" name="brandName" type="text" value="Studio Sol" />
+                        </div>
+
+                        <div class="admin-field">
+                          <label for="logo-alt">Logo alt text</label>
+                          <input id="logo-alt" name="logoAlt" type="text" value="Studio Sol home" />
+                        </div>
+
+                        <div class="admin-field">
+                          <label for="logo-caption">Logo caption</label>
+                          <input id="logo-caption" name="logoCaption" type="text" value="Primary salon logo" />
+                        </div>
+
+                        <div class="admin-field">
+                          <label for="logo-placement">Usage</label>
+                          <select id="logo-placement" name="logoPlacement">
+                            <option selected>Use globally across public and admin pages</option>
+                            <option>Use public site only</option>
+                            <option>Use admin only</option>
+                          </select>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="admin-section">
+                  <h2>Small site mark</h2>
+                  <p class="admin-section__copy">
+                    Optional smaller version for favicon, compact menus, browser tabs, and app-style icons later.
+                  </p>
+
+                  <div class="admin-form-grid">
+                    <div class="admin-field admin-field--full">
+                      <label for="site-mark">Upload small mark</label>
+                      <input id="site-mark" name="siteMark" type="file" accept="image/svg+xml,image/png,image/jpeg,image/webp" />
+                      <p class="admin-help">Use a simple square or circular version of the logo. This is separate from the main header logo.</p>
+                    </div>
+
+                    <div class="admin-field admin-field--full">
+                      <label for="site-mark-alt">Small mark alt text</label>
+                      <input id="site-mark-alt" name="siteMarkAlt" type="text" value="Studio Sol brand mark" />
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="admin-content-page" data-admin-content="landing">
                 <section class="admin-section">
                   <h2>Landing hero</h2>
                   <p class="admin-section__copy">
