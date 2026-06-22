@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="6" r="2.5"/>
+    <circle cx="6" cy="18" r="2.5"/>
+    <path d="M8 8l12 12"/>
+    <path d="M8 16L20 4"/>
+  </symbol>
+
+  <symbol id="icon-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.5 4.5l5 5-9.8 9.8a3.5 3.5 0 0 1-5-5L14.5 4.5z"/>
+    <path d="M13 6l5 5"/>
+    <path d="M5.5 18.5l-2 2"/>
+  </symbol>
+
+  <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/>
+    <path d="M19 15l.9 2.5L22 18.4l-2.1.8L19 22l-.9-2.8-2.1-.8 2.1-.9L19 15z"/>
+    <path d="M5 2l.7 2L8 5l-2.3.8L5 8l-.7-2.2L2 5l2.3-1L5 2z"/>
+  </symbol>
+
+  <symbol id="icon-dryer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 9.5c0-2 1.5-3.5 3.5-3.5H19v7H7.5C5.5 13 4 11.5 4 9.5z"/>
+    <path d="M19 7l3-1v8l-3-1"/>
+    <path d="M10 13l2 7h3l-1.6-7"/>
+    <path d="M7 9.5h.1"/>
+  </symbol>
+
+  <symbol id="icon-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 3c-2 2.6-2 5.4 0 8s2 5.4 0 8"/>
+    <path d="M12 3c-2 2.6-2 5.4 0 8s2 5.4 0 8"/>
+    <path d="M17 3c-2 2.6-2 5.4 0 8s2 5.4 0 8"/>
+  </symbol>
+
+  <symbol id="icon-ring" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 4h6l-2 4h-2L9 4z"/>
+    <circle cx="12" cy="15" r="5.5"/>
+  </symbol>
+
+  <symbol id="icon-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3s7 7.1 7 12a7 7 0 0 1-14 0c0-4.9 7-12 7-12z"/>
+  </symbol>
+</svg>
