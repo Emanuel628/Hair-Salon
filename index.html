@@ -5,42 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Studio Sol salon landing page concept by Mejor Tech." />
     <title>Studio Sol | Hair that feels like you.</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="preload" href="assets/stylist-body-placeholder.svg" as="image" />
     <link rel="preload" href="assets/stylist-mobile-base.svg" as="image" media="(max-width: 900px)" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .visual-column{--arm-angle:-8deg}.visual-column[data-pointing-mode="connector"] .model-arm{opacity:.58}.visual-column[data-pointing-mode="connector"] .service-arc__path,.visual-column[data-pointing-mode="connector"] .mobile-service-arc__path{stroke:var(--color-accent);opacity:1;filter:drop-shadow(0 0 6px rgba(189,115,95,.26))}.visual-column[data-pointing-mode="arm"] .service-arc__path,.visual-column[data-pointing-mode="arm"] .mobile-service-arc__path{stroke:var(--color-accent-soft);opacity:.82;filter:none}.model-arm{will-change:transform}.model-composite img{pointer-events:none;user-select:none}
-    </style>
     <script src="app.js" defer></script>
   </head>
+
   <body>
     <div class="site-frame">
       <header class="site-header" aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="Studio Sol home"><img src="assets/studio-sol-mark.svg" alt="" class="brand__mark" /><span class="brand__name">Studio Sol</span></a>
-        <nav class="category-nav" aria-label="Service categories"><a class="category-nav__link category-nav__link--active" href="#hair">Hair</a><a class="category-nav__link" href="#nails">Nails</a><a class="category-nav__link" href="#massage">Massage</a><a class="category-nav__link" href="#brows">Brows</a><a class="category-nav__link" href="#lashes">Lashes</a><a class="category-nav__link" href="#bridal">Bridal</a></nav>
+        <a class="brand" href="#top" aria-label="Studio Sol home">
+          <img src="assets/studio-sol-mark.svg" alt="" class="brand__mark" />
+          <span class="brand__name">Studio Sol</span>
+        </a>
+
+        <nav class="category-nav" aria-label="Service categories">
+          <a class="category-nav__link category-nav__link--active" href="#hair">Hair</a>
+          <a class="category-nav__link" href="#nails">Nails</a>
+          <a class="category-nav__link" href="#massage">Massage</a>
+          <a class="category-nav__link" href="#brows">Brows</a>
+          <a class="category-nav__link" href="#lashes">Lashes</a>
+          <a class="category-nav__link" href="#bridal">Bridal</a>
+        </nav>
+
         <a class="button button--small" href="#book">Book Now</a>
       </header>
 
       <main id="top" class="landing-grid" aria-label="Studio Sol landing page">
-        <section class="copy-column" aria-labelledby="hero-title"><div class="copy-column__inner"><p class="eyebrow">Luxury Hair. Personal Touch.</p><h1 id="hero-title" class="hero-title">Hair that feels like you.</h1><div class="title-rule" aria-hidden="true"></div><p class="hero-copy">Custom cuts, lived-in color, balayage, and effortless styling—crafted around you. Because when your hair feels like you, you walk a little taller.</p><div class="hero-actions" aria-label="Primary actions"><a class="button button--primary" href="#book"><span>Book Appointment</span><span aria-hidden="true">→</span></a><a class="button button--secondary" href="#services">View Services</a></div>
-          <article class="mobile-service-card" aria-label="Featured service"><div class="mobile-service-card__copy"><p>Featured Service</p><h2 data-service-title>Balayage</h2><span aria-hidden="true"></span><p data-service-description>Soft, dimensional color for a bright, natural finish.</p><a class="button button--primary button--mobile-card" href="#book-balayage" data-service-cta><span>Book Balayage</span><span aria-hidden="true">→</span></a></div><img src="assets/balayage-thumbnail.svg" alt="Dimensional brunette balayage hair waves" /></article>
-          <aside class="testimonial" aria-label="Client testimonial"><div class="stars" aria-label="5 star rating">★★★★★</div><blockquote>“I’ve never felt more confident. She just gets it.”</blockquote><p class="testimonial__name">– Jessica R.</p></aside>
-          <section class="featured-services" aria-labelledby="featured-title"><h2 id="featured-title">Featured Hair Services</h2><div class="featured-services__grid"><article class="mini-service"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg><h3>Precision Cuts</h3><p>Tailored to you</p></article><article class="mini-service"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg><h3>Custom Color</h3><p>Dimensional results</p></article><article class="mini-service"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg><h3>Blowouts</h3><p>Smooth. Polished.</p></article><article class="mini-service"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg><h3>Treatments</h3><p>Healthy from within</p></article></div></section><p class="helper-pill"><span aria-hidden="true">✧</span><span>Hover a service on the right to see more details.</span><span aria-hidden="true">›</span></p></div></section>
+        <section class="copy-column" aria-labelledby="hero-title">
+          <div class="copy-column__inner">
+            <p class="eyebrow">Luxury Hair. Personal Touch.</p>
+            <h1 id="hero-title" class="hero-title">Hair that feels like you.</h1>
+            <div class="title-rule" aria-hidden="true"></div>
 
-        <section class="visual-column" aria-labelledby="services-title" data-photo-mode="showcase" data-pointing-mode="arm">
-          <div class="visual-stage visual-stage--desktop"><div class="salon-backdrop" aria-hidden="true"><div class="salon-backdrop__mirror"></div><div class="salon-backdrop__chair"></div><div class="salon-backdrop__shelf"></div></div>
-            <div class="stylist-guide model-composite model-composite--desktop" role="img" aria-label="Salon stylist with a fixed photo layer and a movable pointing layer" style="aspect-ratio:410/690;"><img class="model-layer model-body" style="position:absolute;inset:0;width:100%;height:auto;max-width:none;" src="assets/stylist-body-placeholder.svg" alt="" aria-hidden="true" /><span class="model-layer model-arm" aria-hidden="true" style="position:absolute;left:51.5%;top:31.5%;width:62%;height:9%;border-radius:999px;background:#191716;transform-origin:8% 50%;transform:rotate(var(--arm-angle,-8deg));transition:transform 260ms ease,opacity 180ms ease;"><span aria-hidden="true" style="position:absolute;right:-6%;top:14%;width:28%;height:72%;border-radius:999px;background:#d9a47f;transform:rotate(-10deg);"></span></span></div>
-            <svg class="service-arc" viewBox="0 0 620 720" aria-hidden="true"><path class="service-arc__path" d="M150 72 C420 15 590 220 565 415 C545 575 430 678 260 690" /><circle cx="250" cy="46" r="5" /><circle cx="395" cy="102" r="5" /><circle cx="528" cy="252" r="5" /><circle cx="556" cy="372" r="5" /><circle cx="503" cy="540" r="5" /><circle cx="412" cy="640" r="5" /></svg>
-            <div class="service-node service-node--cut" data-service-id="cut" style="--x: 48%; --y: 7%;"><button type="button" aria-label="View Cut details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg></button><span>Cut</span></div><div class="service-node service-node--color" data-service-id="color" style="--x: 61%; --y: 16%;"><button type="button" aria-label="View Color details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg></button><span>Color</span></div><div class="service-node service-node--active service-node--balayage" data-service-id="balayage" style="--x: 74%; --y: 31%;"><button type="button" aria-label="View Balayage details" aria-pressed="true"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-sparkle"></use></svg></button><span>Balayage</span></div><div class="service-node service-node--blowout" data-service-id="blowout" style="--x: 77%; --y: 47%;"><button type="button" aria-label="View Blowout details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-dryer"></use></svg></button><span>Blowout</span></div><div class="service-node service-node--extensions" data-service-id="extensions" style="--x: 73%; --y: 62%;"><button type="button" aria-label="View Extensions details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg></button><span>Extensions</span></div><div class="service-node service-node--bridal" data-service-id="bridal" style="--x: 66%; --y: 78%;"><button type="button" aria-label="View Bridal Hair details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-ring"></use></svg></button><span>Bridal Hair</span></div><div class="service-node service-node--treatments" data-service-id="treatments" style="--x: 50%; --y: 88%;"><button type="button" aria-label="View Treatments details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg></button><span>Treatments</span></div>
-            <article class="service-card" aria-label="Featured service"><p>Featured Service</p><h2 id="services-title" data-service-title>Balayage</h2><div class="title-rule title-rule--card" aria-hidden="true"></div><p class="service-card__copy" data-service-description>Soft, dimensional color for a bright, natural finish.</p><a class="button button--primary button--card" href="#book-balayage" data-service-cta><span>Book Balayage</span><span aria-hidden="true">→</span></a></article><p class="hover-note" aria-hidden="true">Hover any<br />service to see<br />details update</p></div>
+            <p class="hero-copy">
+              Custom cuts, lived-in color, balayage, and effortless styling—crafted
+              around you. Because when your hair feels like you, you walk a little taller.
+            </p>
 
-          <div class="mobile-arc-stage" aria-label="Tap a service to update details"><svg class="mobile-service-arc" viewBox="0 0 360 380" aria-hidden="true"><path class="mobile-service-arc__path" d="M40 250 C58 -54 302 -54 320 250" /><circle cx="112" cy="118" r="4" /><circle cx="248" cy="118" r="4" /><circle cx="58" cy="244" r="4" /><circle cx="302" cy="244" r="4" /></svg><div class="mobile-node mobile-node--cut" data-service-id="cut"><button type="button" aria-label="View Cut details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg></button><span>Cut</span></div><div class="mobile-node mobile-node--active mobile-node--balayage" data-service-id="balayage"><button type="button" aria-label="View Balayage details" aria-pressed="true"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-sparkle"></use></svg></button><span>Balayage</span></div><div class="mobile-node mobile-node--blowout" data-service-id="blowout"><button type="button" aria-label="View Blowout details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-dryer"></use></svg></button><span>Blowout</span></div><div class="mobile-node mobile-node--color" data-service-id="color"><button type="button" aria-label="View Color details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg></button><span>Color</span></div><div class="mobile-node mobile-node--extensions" data-service-id="extensions"><button type="button" aria-label="View Extensions details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg></button><span>Extensions</span></div><div class="mobile-node mobile-node--treatments" data-service-id="treatments"><button type="button" aria-label="View Treatments details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg></button><span>Treatments</span></div><div class="mobile-node mobile-node--bridal" data-service-id="bridal"><button type="button" aria-label="View Bridal Hair details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-ring"></use></svg></button><span>Bridal Hair</span></div><p class="tap-note" aria-hidden="true"><span>Tap a service</span><span>to update details</span></p><div class="mobile-stylist-guide model-composite model-composite--mobile" role="img" aria-label="Salon stylist upper torso with a fixed photo layer and a movable pointing layer" style="aspect-ratio:520/520;"><img class="model-layer model-body" style="position:absolute;inset:0;width:100%;height:auto;max-width:none;" src="assets/stylist-mobile-base.svg" alt="" aria-hidden="true" /><span class="model-layer model-arm" aria-hidden="true" style="position:absolute;left:62%;top:50%;width:58%;height:12%;border-radius:999px;background:#191716;transform-origin:8% 52%;transform:rotate(var(--arm-angle,-8deg));transition:transform 260ms ease,opacity 180ms ease;"><span aria-hidden="true" style="position:absolute;right:-6%;top:14%;width:28%;height:72%;border-radius:999px;background:#d9a47f;transform:rotate(-10deg);"></span></span></div></div>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button button--primary" href="#book">
+                <span>Book Appointment</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="button button--secondary" href="#services">View Services</a>
+            </div>
+
+            <article class="mobile-service-card" aria-label="Featured service">
+              <div class="mobile-service-card__copy">
+                <p>Featured Service</p>
+                <h2 data-service-title>Balayage</h2>
+                <span aria-hidden="true"></span>
+                <p data-service-description>Soft, dimensional color for a bright, natural finish.</p>
+                <a class="button button--primary button--mobile-card" href="#book-balayage" data-service-cta>
+                  <span>Book Balayage</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+              <img src="assets/balayage-thumbnail.svg" alt="Dimensional brunette balayage hair waves" />
+            </article>
+
+            <aside class="testimonial" aria-label="Client testimonial">
+              <div class="stars" aria-label="5 star rating">★★★★★</div>
+              <blockquote>“I’ve never felt more confident. She just gets it.”</blockquote>
+              <p class="testimonial__name">– Jessica R.</p>
+            </aside>
+
+            <section class="featured-services" aria-labelledby="featured-title">
+              <h2 id="featured-title">Featured Hair Services</h2>
+              <div class="featured-services__grid">
+                <article class="mini-service">
+                  <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg>
+                  <h3>Precision Cuts</h3>
+                  <p>Tailored to you</p>
+                </article>
+                <article class="mini-service">
+                  <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg>
+                  <h3>Custom Color</h3>
+                  <p>Dimensional results</p>
+                </article>
+                <article class="mini-service">
+                  <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg>
+                  <h3>Blowouts</h3>
+                  <p>Smooth. Polished.</p>
+                </article>
+                <article class="mini-service">
+                  <svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg>
+                  <h3>Treatments</h3>
+                  <p>Healthy from within</p>
+                </article>
+              </div>
+            </section>
+
+            <p class="helper-pill">
+              <span aria-hidden="true">✧</span>
+              <span>Hover a service on the right to see more details.</span>
+              <span aria-hidden="true">›</span>
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="visual-column"
+          aria-labelledby="services-title"
+          data-photo-mode="showcase"
+          data-pointing-mode="arm"
+        >
+          <div class="visual-stage visual-stage--desktop">
+            <div class="salon-backdrop" aria-hidden="true">
+              <div class="salon-backdrop__mirror"></div>
+              <div class="salon-backdrop__chair"></div>
+              <div class="salon-backdrop__shelf"></div>
+            </div>
+
+            <div
+              class="model-composite model-composite--desktop"
+              role="img"
+              aria-label="Salon stylist with a fixed body layer and a rotating pointing arm layer"
+            >
+              <img class="model-layer model-body" src="assets/stylist-body-placeholder.svg" alt="" aria-hidden="true" />
+              <span class="model-layer model-arm" aria-hidden="true"><span></span></span>
+            </div>
+
+            <svg class="service-arc" viewBox="0 0 620 720" aria-hidden="true">
+              <path class="service-arc__path" d="M150 72 C420 15 590 220 565 415 C545 575 430 678 260 690" />
+              <circle cx="250" cy="46" r="5" />
+              <circle cx="395" cy="102" r="5" />
+              <circle cx="528" cy="252" r="5" />
+              <circle cx="556" cy="372" r="5" />
+              <circle cx="503" cy="540" r="5" />
+              <circle cx="412" cy="640" r="5" />
+            </svg>
+
+            <div class="service-node service-node--cut" data-service-id="cut" style="--x: 48%; --y: 7%;">
+              <button type="button" aria-label="View Cut details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg></button>
+              <span>Cut</span>
+            </div>
+            <div class="service-node service-node--color" data-service-id="color" style="--x: 61%; --y: 16%;">
+              <button type="button" aria-label="View Color details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg></button>
+              <span>Color</span>
+            </div>
+            <div class="service-node service-node--active service-node--balayage" data-service-id="balayage" style="--x: 74%; --y: 31%;">
+              <button type="button" aria-label="View Balayage details" aria-pressed="true"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-sparkle"></use></svg></button>
+              <span>Balayage</span>
+            </div>
+            <div class="service-node service-node--blowout" data-service-id="blowout" style="--x: 77%; --y: 47%;">
+              <button type="button" aria-label="View Blowout details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-dryer"></use></svg></button>
+              <span>Blowout</span>
+            </div>
+            <div class="service-node service-node--extensions" data-service-id="extensions" style="--x: 73%; --y: 62%;">
+              <button type="button" aria-label="View Extensions details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg></button>
+              <span>Extensions</span>
+            </div>
+            <div class="service-node service-node--bridal" data-service-id="bridal" style="--x: 66%; --y: 78%;">
+              <button type="button" aria-label="View Bridal Hair details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-ring"></use></svg></button>
+              <span>Bridal Hair</span>
+            </div>
+            <div class="service-node service-node--treatments" data-service-id="treatments" style="--x: 50%; --y: 88%;">
+              <button type="button" aria-label="View Treatments details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg></button>
+              <span>Treatments</span>
+            </div>
+
+            <article class="service-card" aria-label="Featured service">
+              <p>Featured Service</p>
+              <h2 id="services-title" data-service-title>Balayage</h2>
+              <div class="title-rule title-rule--card" aria-hidden="true"></div>
+              <p class="service-card__copy" data-service-description>Soft, dimensional color for a bright, natural finish.</p>
+              <a class="button button--primary button--card" href="#book-balayage" data-service-cta>
+                <span>Book Balayage</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </article>
+
+            <p class="hover-note" aria-hidden="true">Hover any<br />service to see<br />details update</p>
+          </div>
+
+          <div class="mobile-arc-stage" aria-label="Tap a service to update details">
+            <svg class="mobile-service-arc" viewBox="0 0 420 310" aria-hidden="true">
+              <path class="mobile-service-arc__path" d="M22 262 C64 54 356 54 398 262" />
+              <circle cx="100" cy="142" r="4" />
+              <circle cx="210" cy="86" r="4" />
+              <circle cx="320" cy="142" r="4" />
+              <circle cx="48" cy="258" r="4" />
+              <circle cx="372" cy="258" r="4" />
+            </svg>
+
+            <div class="mobile-node mobile-node--cut" data-service-id="cut">
+              <button type="button" aria-label="View Cut details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-scissors"></use></svg></button>
+              <span>Cut</span>
+            </div>
+            <div class="mobile-node mobile-node--active mobile-node--balayage" data-service-id="balayage">
+              <button type="button" aria-label="View Balayage details" aria-pressed="true"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-sparkle"></use></svg></button>
+              <span>Balayage</span>
+            </div>
+            <div class="mobile-node mobile-node--blowout" data-service-id="blowout">
+              <button type="button" aria-label="View Blowout details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-dryer"></use></svg></button>
+              <span>Blowout</span>
+            </div>
+            <div class="mobile-node mobile-node--color" data-service-id="color">
+              <button type="button" aria-label="View Color details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-brush"></use></svg></button>
+              <span>Color</span>
+            </div>
+            <div class="mobile-node mobile-node--extensions" data-service-id="extensions">
+              <button type="button" aria-label="View Extensions details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-waves"></use></svg></button>
+              <span>Extensions</span>
+            </div>
+            <div class="mobile-node mobile-node--treatments" data-service-id="treatments">
+              <button type="button" aria-label="View Treatments details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-droplet"></use></svg></button>
+              <span>Treatments</span>
+            </div>
+            <div class="mobile-node mobile-node--bridal" data-service-id="bridal">
+              <button type="button" aria-label="View Bridal Hair details"><svg aria-hidden="true"><use href="assets/service-icons.svg#icon-ring"></use></svg></button>
+              <span>Bridal Hair</span>
+            </div>
+
+            <p class="tap-note" aria-hidden="true">
+              <span>Tap a service</span>
+              <span>to update details</span>
+            </p>
+
+            <div
+              class="model-composite model-composite--mobile"
+              role="img"
+              aria-label="Salon stylist upper torso with a fixed body layer and a rotating pointing arm layer"
+            >
+              <img class="model-layer model-body" src="assets/stylist-mobile-base.svg" alt="" aria-hidden="true" />
+              <span class="model-layer model-arm" aria-hidden="true"><span></span></span>
+            </div>
+          </div>
         </section>
       </main>
-      <footer class="site-footer"><p>© Studio Sol. Concept by Mejor Tech.</p><nav class="footer-links" aria-label="Footer links"><a href="?view=desktop">Desktop View</a><a href="/admin/sign-in">Admin</a></nav></footer>
+
+      <footer class="site-footer">
+        <p>© Studio Sol. Concept by Mejor Tech.</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="?view=desktop">Desktop View</a>
+          <a href="/admin/sign-in">Admin</a>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>
