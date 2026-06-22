@@ -140,6 +140,7 @@ button {
 
 .button:focus-visible,
 .service-node button:focus-visible,
+.mobile-node button:focus-visible,
 .category-nav__link:focus-visible,
 .site-footer a:focus-visible {
   outline: 3px solid rgba(189, 115, 95, 0.38);
@@ -150,18 +151,16 @@ button {
   transform: translateY(-1px);
 }
 
-.button--small {
-  justify-self: end;
-  min-height: 54px;
-  background: var(--color-accent);
-  color: #fff9f4;
-  box-shadow: 0 12px 24px rgba(189, 115, 95, 0.2);
-}
-
+.button--small,
 .button--primary {
   background: var(--color-accent);
   color: #fff9f4;
   box-shadow: 0 16px 36px rgba(189, 115, 95, 0.2);
+}
+
+.button--small {
+  justify-self: end;
+  min-height: 54px;
 }
 
 .button--primary:hover {
@@ -175,6 +174,7 @@ button {
   border-color: rgba(47, 37, 33, 0.68);
 }
 
+/* Desktop is a true two-column grid. Text cannot overlap the visual column. */
 .landing-grid {
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
   display: grid;
@@ -303,7 +303,6 @@ button {
 .featured-services__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid transparent;
 }
 
 .mini-service {
@@ -361,13 +360,17 @@ button {
     linear-gradient(90deg, #f4e9df 0%, #fbf5ef 100%);
 }
 
-.visual-stage {
+.visual-stage--desktop {
   position: relative;
   width: 100%;
   min-height: 100%;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   overflow: hidden;
   container-type: inline-size;
+}
+
+.mobile-arc-stage {
+  display: none;
 }
 
 .salon-backdrop {
@@ -407,10 +410,6 @@ button {
   background: rgba(101, 75, 62, 0.12);
 }
 
-.stylist-picture {
-  display: contents;
-}
-
 .stylist-guide {
   position: absolute;
   left: clamp(34px, 7cqw, 94px);
@@ -434,14 +433,16 @@ button {
   overflow: visible;
 }
 
-.service-arc__path {
+.service-arc__path,
+.mobile-service-arc__path {
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
-  opacity: 0.8;
+  opacity: 0.82;
 }
 
-.service-arc circle {
+.service-arc circle,
+.mobile-service-arc circle {
   fill: var(--color-accent-soft);
   stroke: rgba(255, 255, 255, 0.72);
   stroke-width: 2;
@@ -460,21 +461,26 @@ button {
   min-width: max-content;
 }
 
-.service-node button {
-  width: var(--node-size);
-  height: var(--node-size);
+.service-node button,
+.mobile-node button {
   border: 0;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.93);
   color: var(--color-text);
   box-shadow: var(--shadow-soft);
   cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease, color 180ms ease;
 }
 
-.service-node svg {
+.service-node button {
+  width: var(--node-size);
+  height: var(--node-size);
+}
+
+.service-node svg,
+.mobile-node svg {
   width: 34%;
   height: 34%;
   stroke-width: 1.8;
@@ -489,13 +495,17 @@ button {
 
 .service-node button:hover,
 .service-node button:focus-visible,
-.service-node--active button {
+.service-node--active button,
+.mobile-node button:hover,
+.mobile-node button:focus-visible,
+.mobile-node--active button {
   transform: scale(1.06);
   color: var(--color-accent);
   box-shadow: 0 16px 40px rgba(189, 115, 95, 0.22);
 }
 
-.service-node--active button {
+.service-node--active button,
+.mobile-node--active button {
   outline: 8px solid rgba(189, 115, 95, 0.18);
 }
 
@@ -504,10 +514,6 @@ button {
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 2cqw, 2.15rem);
   font-weight: 700;
-}
-
-.tap-note {
-  display: none;
 }
 
 .service-card {
@@ -829,139 +835,138 @@ button {
 
   .testimonial,
   .featured-services,
-  .helper-pill {
+  .helper-pill,
+  .visual-stage--desktop {
     display: none;
   }
 
   .visual-column {
+    overflow: visible;
+    background: #fffaf4;
+  }
+
+  .mobile-arc-stage {
+    position: relative;
+    display: block;
+    width: min(100%, 440px);
+    height: 560px;
+    margin: 0 auto;
     overflow: hidden;
-    background: linear-gradient(180deg, #fffaf4 0%, #f7eee6 100%);
-  }
-
-  .visual-stage {
-    height: 640px;
-    min-height: 640px;
-    margin-top: 0;
     background:
-      radial-gradient(ellipse at 50% 28%, rgba(255, 255, 255, 0.9), transparent 46%),
-      linear-gradient(180deg, #fffaf4 0%, #f6eee7 100%);
+      radial-gradient(ellipse at 50% 18%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.78) 35%, rgba(251, 246, 241, 0) 62%),
+      linear-gradient(180deg, #fffaf4 0%, #f8eee6 100%);
   }
 
-  .salon-backdrop__mirror {
-    left: 62%;
-    top: 56%;
-    width: 112px;
-    height: 185px;
-    opacity: 0.44;
-  }
-
-  .salon-backdrop__chair {
-    left: -42px;
-    bottom: 5%;
-    width: 185px;
-    height: 115px;
-    opacity: 0.46;
-  }
-
-  .salon-backdrop__shelf {
-    left: 49%;
-    bottom: 11%;
-    width: 250px;
-    opacity: 0.35;
-  }
-
-  .service-card {
-    display: none;
-  }
-
-  .stylist-guide {
+  .mobile-service-arc {
+    position: absolute;
     left: 50%;
-    bottom: -8px;
+    top: 18px;
     z-index: 4;
-    width: min(118vw, 560px);
+    width: min(102vw, 420px);
+    height: 310px;
+    transform: translateX(-50%);
+    color: var(--color-accent-soft);
+    overflow: visible;
+  }
+
+  .mobile-stylist-guide {
+    position: absolute;
+    left: 50%;
+    bottom: -26px;
+    z-index: 3;
+    width: min(112vw, 520px);
     max-width: none;
     transform: translateX(-50%);
+    filter: drop-shadow(0 20px 34px rgba(69, 42, 30, 0.14));
+    pointer-events: none;
+    user-select: none;
   }
 
-  .service-arc {
-    left: 50%;
-    right: auto;
-    top: 20px;
-    z-index: 5;
-    width: min(116vw, 620px);
-    height: 420px;
-    transform: translateX(-50%);
-  }
-
-  .service-node {
-    --node-size: 58px;
+  .mobile-node {
+    position: absolute;
     z-index: 8;
-    flex-direction: column;
-    gap: 8px;
-    min-width: 80px;
+    display: grid;
+    justify-items: center;
+    gap: 7px;
+    width: 84px;
     text-align: center;
+    transform: translate(-50%, -50%);
   }
 
-  .service-node span {
+  .mobile-node button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .mobile-node span {
+    color: var(--color-text);
     font-size: 0.88rem;
+    font-weight: 600;
     line-height: 1.05;
-    white-space: normal;
   }
 
-  .service-node--active span {
-    font-size: 1.55rem;
+  .mobile-node--active button {
+    width: 66px;
+    height: 66px;
+  }
+
+  .mobile-node--active span {
+    color: var(--color-accent);
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
     line-height: 0.95;
-    white-space: nowrap;
   }
 
-  .service-node--cut {
-    --x: 32% !important;
-    --y: 13% !important;
+  .mobile-node--cut {
+    left: 31%;
+    top: 142px;
   }
 
-  .service-node--balayage {
-    --x: 50% !important;
-    --y: 8% !important;
+  .mobile-node--balayage {
+    left: 50%;
+    top: 78px;
   }
 
-  .service-node--blowout {
-    --x: 69% !important;
-    --y: 15% !important;
+  .mobile-node--blowout {
+    left: 69%;
+    top: 142px;
   }
 
-  .service-node--color {
-    --x: 19% !important;
-    --y: 32% !important;
+  .mobile-node--color {
+    left: 16%;
+    top: 254px;
   }
 
-  .service-node--extensions {
-    --x: 84% !important;
-    --y: 38% !important;
+  .mobile-node--extensions {
+    left: 84%;
+    top: 254px;
   }
 
-  .service-node--treatments {
-    --x: 11% !important;
-    --y: 55% !important;
+  .mobile-node--treatments {
+    left: 12%;
+    top: 380px;
   }
 
-  .service-node--bridal {
-    --x: 84% !important;
-    --y: 58% !important;
+  .mobile-node--bridal {
+    left: 88%;
+    top: 380px;
   }
 
   .tap-note {
     position: absolute;
     left: 50%;
-    top: 168px;
+    top: 202px;
     z-index: 7;
     display: grid;
     transform: translateX(-50%);
     color: var(--color-muted);
     font-family: var(--font-display);
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     font-style: italic;
     line-height: 1.08;
     text-align: center;
+    pointer-events: none;
   }
 
   .tap-note::before {
@@ -970,10 +975,6 @@ button {
     color: var(--color-accent);
     font-size: 1.35rem;
     line-height: 1;
-  }
-
-  .hover-note {
-    display: none;
   }
 
   .site-footer {
@@ -1022,22 +1023,39 @@ button {
     width: 100%;
   }
 
-  .visual-stage {
-    height: 610px;
-    min-height: 610px;
+  .mobile-arc-stage {
+    height: 540px;
   }
 
-  .service-node {
-    --node-size: 54px;
-    min-width: 72px;
+  .mobile-service-arc {
+    top: 16px;
+    width: 424px;
   }
 
-  .service-node--extensions {
-    --x: 85% !important;
+  .mobile-node button {
+    width: 54px;
+    height: 54px;
   }
 
-  .service-node--bridal {
-    --x: 84% !important;
+  .mobile-node--active button {
+    width: 64px;
+    height: 64px;
+  }
+
+  .mobile-node--color {
+    left: 15%;
+  }
+
+  .mobile-node--extensions {
+    left: 85%;
+  }
+
+  .mobile-node--treatments {
+    left: 10%;
+  }
+
+  .mobile-node--bridal {
+    left: 90%;
   }
 
   .site-footer {
