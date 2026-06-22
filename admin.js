@@ -4,7 +4,7 @@ document.querySelectorAll("[data-admin-page]").forEach((button) => {
 
     document.querySelectorAll("[data-admin-page]").forEach((item) => {
       item.classList.toggle("is-active", item.dataset.adminPage === target);
-      item.setAttribute("aria-pressed", String(item.datasetPage === target));
+      item.setAttribute("aria-pressed", String(item.dataset.adminPage === target));
     });
 
     document.querySelectorAll("[data-admin-content]").forEach((panel) => {
