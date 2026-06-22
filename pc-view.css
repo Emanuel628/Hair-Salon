@@ -1,0 +1,220 @@
+/*
+  PC VIEW MODE
+  Triggered by ?view=desktop. This lets the footer's Desktop View link show
+  the desktop/PC composition even when the site is opened from a phone.
+  It does not replace the mobile layout; it forces the existing desktop layout
+  into a fixed-width canvas so it can be reviewed from mobile.
+*/
+
+html.pc-view {
+  min-width: 1440px;
+  overflow-x: auto;
+}
+
+html.pc-view body {
+  min-width: 1440px;
+  overflow-x: auto;
+  background: #f8f1ea;
+}
+
+html.pc-view .site-frame {
+  width: 1440px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 26% 28%, rgba(255, 255, 255, 0.95), transparent 34%),
+    linear-gradient(90deg, #fffdf9 0%, #fffaf5 42%, #f4eae1 42%, #fbf6f1 100%);
+}
+
+html.pc-view .site-header {
+  height: 104px;
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: minmax(210px, 1fr) minmax(420px, 1.15fr) minmax(150px, 1fr);
+  grid-template-areas: none;
+  align-items: center;
+  gap: 24px;
+  padding: 0 70px;
+  border-top: 0;
+  border-bottom: 1px solid rgba(221, 202, 190, 0.64);
+  background: rgba(255, 253, 249, 0.88);
+}
+
+html.pc-view .site-header::after {
+  content: none;
+  display: none;
+}
+
+html.pc-view .brand {
+  grid-area: auto;
+  justify-self: start;
+}
+
+html.pc-view .brand__mark {
+  width: 48px;
+}
+
+html.pc-view .brand__name {
+  font-size: clamp(2.05rem, 2.5vw, 3rem);
+}
+
+html.pc-view .category-nav {
+  grid-area: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  justify-content: center;
+  gap: clamp(28px, 3vw, 56px);
+  overflow: hidden;
+}
+
+html.pc-view .category-nav__link {
+  padding: 10px 0 12px;
+  font-size: 1rem;
+}
+
+html.pc-view .button--small {
+  grid-area: auto;
+  justify-self: end;
+  min-height: 54px;
+  padding-inline: 28px;
+}
+
+html.pc-view .landing-grid {
+  min-height: calc(100vh - 104px - 48px);
+  display: grid;
+  grid-template-columns: minmax(0, 41.4%) minmax(0, 58.6%);
+  grid-template-areas: "copy visual";
+  overflow: hidden;
+  background: transparent;
+}
+
+html.pc-view .copy-column {
+  grid-area: copy;
+  overflow: auto;
+  border-right: 1px solid rgba(238, 223, 213, 0.7);
+  background: rgba(255, 253, 249, 0.7);
+}
+
+html.pc-view .copy-column__inner {
+  width: min(100%, 610px);
+  margin: 0;
+  padding: clamp(42px, 6vh, 82px) clamp(28px, 5vw, 72px) 36px;
+  text-align: left;
+}
+
+html.pc-view .eyebrow {
+  margin: 0 0 20px;
+  font-size: 0.82rem;
+  letter-spacing: 0.34em;
+}
+
+html.pc-view .hero-title {
+  margin: 0;
+  max-width: 560px;
+  font-size: clamp(4rem, 6.9vw, 6.8rem);
+  line-height: 0.9;
+}
+
+html.pc-view .title-rule {
+  margin: 30px 0 22px;
+}
+
+html.pc-view .hero-copy {
+  margin: 0;
+  max-width: 480px;
+  font-size: clamp(1.02rem, 1.2vw, 1.2rem);
+}
+
+html.pc-view .hero-actions {
+  justify-content: flex-start;
+  margin: 38px 0 34px;
+  gap: 20px;
+}
+
+html.pc-view .hero-actions .button {
+  width: auto;
+}
+
+html.pc-view .mobile-service-card {
+  display: none;
+}
+
+html.pc-view .testimonial,
+html.pc-view .featured-services,
+html.pc-view .helper-pill {
+  display: block;
+}
+
+html.pc-view .helper-pill {
+  display: flex;
+}
+
+html.pc-view .featured-services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+html.pc-view .mini-service {
+  border-right: 1px solid var(--color-line);
+  border-top: 0;
+}
+
+html.pc-view .mini-service:last-child {
+  border-right: 0;
+}
+
+html.pc-view .visual-column {
+  grid-area: visual;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 62% 31%, rgba(255, 255, 255, 0.65), transparent 34%),
+    linear-gradient(90deg, #f4e9df 0%, #fbf5ef 100%);
+}
+
+html.pc-view .visual-stage--desktop {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  height: calc(100vh - 104px - 48px);
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+html.pc-view .mobile-arc-stage {
+  display: none;
+}
+
+html.pc-view .model-composite--desktop {
+  left: clamp(34px, 7cqw, 94px);
+  bottom: -4px;
+  width: clamp(270px, 35cqw, 470px);
+}
+
+html.pc-view .service-arc {
+  right: clamp(52px, 7cqw, 104px);
+  top: clamp(28px, 6vh, 58px);
+  width: min(72%, 660px);
+  height: calc(100% - 76px);
+}
+
+html.pc-view .service-card {
+  left: clamp(280px, 38cqw, 440px);
+  top: 39%;
+  width: clamp(230px, 24cqw, 306px);
+}
+
+html.pc-view .hover-note {
+  display: block;
+}
+
+html.pc-view .site-footer {
+  min-height: 48px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 70px;
+  font-size: 0.82rem;
+}
