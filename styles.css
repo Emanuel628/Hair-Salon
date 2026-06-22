@@ -96,7 +96,7 @@ button { font: inherit; }
 .model-body { inset: 0; width: 100%; height: auto; filter: drop-shadow(0 28px 36px rgba(69,42,30,.16)); }
 .model-arm { display: block; border-radius: 999px; background: #191716; transform: rotate(var(--arm-angle)); transition: transform 260ms ease, opacity 180ms ease; will-change: transform; }
 .model-arm > span { position: absolute; right: -6%; top: 14%; width: 28%; height: 72%; border-radius: 999px; background: #d9a47f; transform: rotate(-10deg); }
-.model-composite--desktop { left: 50%; transform: translateX(-50%); bottom: 0; width: clamp(330px, 46cqw, 480px); aspect-ratio: 410 / 690; }
+.model-composite--desktop { left: 35%; transform: translateX(-50%); bottom: 0; width: clamp(330px, 46cqw, 480px); aspect-ratio: 410 / 690; }
 .model-composite--desktop .model-arm { left: 51.5%; top: 31.5%; width: 62%; height: 9%; transform-origin: 8% 50%; }
 .visual-column[data-pointing-mode="connector"] .model-arm { opacity: .58; }
 .visual-column[data-pointing-mode="connector"] .service-arc__path, .visual-column[data-pointing-mode="connector"] .mobile-service-arc__path { stroke: var(--color-accent); opacity: 1; filter: drop-shadow(0 0 6px rgba(189,115,95,.26)); }
@@ -107,17 +107,17 @@ button { font: inherit; }
 .service-arc__path { vector-effect: non-scaling-stroke; }
 .service-arc circle, .mobile-service-arc circle { fill: var(--color-accent-soft); stroke: rgba(255,255,255,.72); stroke-width: 2; }
 .service-arc circle { vector-effect: non-scaling-stroke; }
-.service-node { --node-size: clamp(58px, 6cqw, 76px); position: absolute; z-index: 6; left: var(--x); top: var(--y); transform: translate(-50%, -50%); display: flex; align-items: center; gap: 16px; min-width: max-content; }
+.service-node { --node-size: clamp(58px, 6cqw, 76px); --label-gap: 14px; position: absolute; z-index: 6; left: var(--x); top: var(--y); width: 0; height: 0; }
 .service-node button, .mobile-node button { border: 0; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.93); color: var(--color-text); box-shadow: var(--shadow-soft); cursor: pointer; touch-action: manipulation; transition: transform 180ms ease, box-shadow 180ms ease, color 180ms ease; }
-.service-node button { width: var(--node-size); height: var(--node-size); }
+.service-node button { position: absolute; left: 0; top: 0; width: var(--node-size); height: var(--node-size); margin: calc(var(--node-size) / -2) 0 0 calc(var(--node-size) / -2); }
 .service-node svg, .mobile-node svg { width: 34%; height: 34%; stroke-width: 1.8; }
-.service-node span { color: var(--color-text); font-size: clamp(.95rem, 1.15cqw, 1.12rem); font-weight: 500; white-space: nowrap; }
+.service-node span { position: absolute; left: calc(var(--node-size) / 2 + var(--label-gap)); top: 0; transform: translateY(-50%); color: var(--color-text); font-size: clamp(.95rem, 1.15cqw, 1.12rem); font-weight: 500; white-space: nowrap; }
 .service-node button:hover, .service-node button:focus-visible, .service-node--active button, .mobile-node button:hover, .mobile-node button:focus-visible, .mobile-node--active button { transform: scale(1.06); color: var(--color-accent); box-shadow: 0 16px 40px rgba(189,115,95,.22); }
 .service-node--active, .mobile-node--active { z-index: 12; }
 .service-node--active button, .mobile-node--active button { outline: 8px solid rgba(189,115,95,.18); }
 .service-node--active span { color: var(--color-accent); font-family: var(--font-display); font-size: clamp(1.55rem, 2cqw, 2.15rem); font-weight: 700; }
 
-.service-card { position: absolute; z-index: 7; left: 31%; top: 45%; transform: translate(-50%, -50%); width: clamp(215px, 24cqw, 285px); min-width: 0; padding: clamp(22px, 2.6cqw, 32px); border-radius: 24px; background: rgba(255,253,249,.92); box-shadow: var(--shadow-card); backdrop-filter: blur(16px); }
+.service-card { position: absolute; z-index: 7; left: 46%; top: 48%; transform: translate(-50%, -50%); width: clamp(215px, 24cqw, 285px); min-width: 0; padding: clamp(22px, 2.6cqw, 32px); border-radius: 24px; background: rgba(255,253,249,.92); box-shadow: var(--shadow-card); backdrop-filter: blur(16px); }
 .service-card p:first-child { margin: 0 0 12px; color: var(--color-accent); font-size: .74rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; }
 .service-card h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 4.2cqw, 4.1rem); line-height: .92; font-weight: 600; letter-spacing: -.06em; overflow-wrap: anywhere; }
 .title-rule--card { margin: 18px 0 16px; width: 48px; }
