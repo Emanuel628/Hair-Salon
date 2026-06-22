@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in to Studio Sol admin." />
+    <title>Sign In | Studio Sol Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/auth.css" />
+    <script src="/auth.js" defer></script>
+  </head>
+
+  <body class="auth-page">
+    <div class="auth-shell">
+      <header class="auth-header" aria-label="Admin navigation">
+        <a class="brand" href="/" aria-label="Back to Studio Sol home">
+          <img src="/assets/studio-sol-mark.svg" alt="" class="brand__mark" />
+          <span class="brand__name">Studio Sol</span>
+        </a>
+      </header>
+
+      <main class="auth-main" aria-labelledby="signin-title">
+        <section class="auth-card">
+          <p class="auth-kicker">Admin Access</p>
+          <h1 id="signin-title" class="auth-title">Sign in.</h1>
+          <p class="auth-intro">
+            Enter the owner account details to manage the salon website content.
+          </p>
+
+          <form class="auth-form" action="#" method="post">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="form-field">
+              <div class="password-row">
+                <label for="password">Password</label>
+                <label class="show-password" for="show-signin-password">
+                  <input id="show-signin-password" type="checkbox" data-show-password="password" />
+                  <span>Show password</span>
+                </label>
+              </div>
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+            </div>
+
+            <button class="button button--primary auth-submit" type="submit">Sign In</button>
+          </form>
+
+          <div class="auth-links">
+            <a href="/admin/register/">Register</a>
+            <a href="/admin/forgot-password/">Forgot password?</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer auth-footer">
+        <p>© Studio Sol. Concept by Mejor Tech.</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="/?view=desktop#top">Desktop View</a>
+          <a href="/admin/sign-in/">Admin</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
