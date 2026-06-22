@@ -6,9 +6,18 @@ The website is built around an interactive service selector that feels like a be
 
 The purpose is not just to display services. The purpose is to guide visitors toward the right service and make booking feel natural.
 
+## Approved UX References
+
+The UX must follow the approved references:
+
+- **Desktop Reference — `image.png`**: the desktop/browser experience.
+- **Mobile Reference — `image_2.png`**: the mobile/phone experience.
+
+The person shown in the references is temporary and will be replaced later. The user experience, layout structure, service arc behavior, and visual hierarchy should stay aligned to the references.
+
 ## Desktop Layout
 
-Desktop uses a two-column landing page.
+Desktop uses a two-column landing page and must match **Desktop Reference — `image.png`**.
 
 ### Header
 
@@ -74,6 +83,8 @@ Soft, dimensional color for a bright, natural finish.
 
 Mobile cannot use the same two-column desktop layout.
 
+Mobile must match **Mobile Reference — `image_2.png`**.
+
 The mobile version should use a vertical funnel:
 
 1. Mobile header
@@ -98,10 +109,24 @@ When the visitor taps a service:
 - The detail card updates
 - The selected node on the arc changes
 - The booking button updates
+- The active node gives visible tap feedback through a subtle ring, glow, scale, or color shift
 
 Recommended helper text:
 
 > Tap a service to update details.
+
+## Responsive Pointing Rule
+
+The pointing visual must stay accurate across screen sizes and resolutions.
+
+Required:
+
+- Use a flexible layout system such as CSS Grid, Flexbox, SVG, or a relative positioning container.
+- Position service nodes with percentages or calculated coordinates instead of one fixed pixel layout.
+- If absolute positioning is used, it must be inside a scalable relative container.
+- The selected service node should have a stable target coordinate.
+- The stylist/guide image and the service arc must scale together.
+- The pointing hand should visually land near the selected icon on both desktop and mobile.
 
 ## Interaction States
 
@@ -126,6 +151,13 @@ Each service should support these states:
 - Accessible focus ring
 - Cursor pointer on desktop
 
+### Tap
+
+- Clear active state
+- Subtle animation or color shift
+- Detail card updates immediately
+- Booking CTA updates immediately
+
 ### Disabled / Unavailable
 
 - Lower opacity
@@ -143,6 +175,9 @@ Required rules:
 - Images need useful alt text
 - Motion should be subtle
 - Respect reduced motion preferences
+- Mobile service nodes need large enough tap targets
+- Icon spacing must prevent fat-finger errors
+- Text contrast must remain readable against the warm background
 
 ## Motion Direction
 
@@ -154,6 +189,7 @@ Use motion for:
 - Slight movement of the active service node
 - Gentle image transition when stylist pose changes
 - Smooth category change
+- Subtle tap confirmation on mobile
 
 Avoid:
 
@@ -169,3 +205,5 @@ Avoid:
 3. The selected service is always obvious.
 4. Booking should never be more than one clear action away.
 5. Desktop and mobile should feel like the same brand, not two unrelated designs.
+6. Desktop must match `image.png`.
+7. Mobile must match `image_2.png`.
