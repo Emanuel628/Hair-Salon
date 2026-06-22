@@ -71,6 +71,28 @@ Use a flexible layout system such as CSS Grid, Flexbox, SVG, or absolute positio
 
 Do not hard-code positions that only work on one desktop or phone size.
 
+## Planned Admin Content Management
+
+The public site should eventually include a subtle **Admin** link in the footer.
+
+That footer link should lead to:
+
+```txt
+/admin/sign-in
+```
+
+The sign-in page should include a register link that leads to:
+
+```txt
+/admin/register
+```
+
+After signing in, the owner should land on an admin Home Screen where they can edit the public site content, including words, titles, service descriptions, booking links, photos, captions, and image alt text.
+
+The admin area must be structured and intentional, not vibe-code style. The owner should edit controlled content fields without being able to accidentally break the approved public design.
+
+See `docs/ADMIN_CONTENT_MANAGEMENT.md` for the full admin plan.
+
 ## Why This Works
 
 This concept is built around a simple conversion path:
@@ -134,6 +156,7 @@ See the `/docs` folder for deeper planning:
 - `SERVICE_DATA_MODEL.md` — service/category data structure
 - `COMPONENT_ARCHITECTURE.md` — recommended React component structure
 - `MVP_SCOPE.md` — what V1 should and should not include
+- `ADMIN_CONTENT_MANAGEMENT.md` — footer admin link, sign-in/register flow, and content editing plan
 - `COPY_DIRECTION.md` — brand voice and sample copy
 
 ## Mejor Tech Positioning
