@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/admin.css" />
+    <link rel="stylesheet" href="/admin-content-editor.css" />
     <script src="/admin.js" defer></script>
   </head>
 
@@ -30,10 +31,6 @@
           <img src="/assets/studio-sol-mark.svg" alt="" class="brand__mark" />
           <span class="brand__name">Studio Sol</span>
         </a>
-
-        <div class="admin-header__actions">
-          <a class="button button--secondary" href="/">View Site</a>
-        </div>
       </header>
 
       <main class="admin-main" aria-labelledby="admin-title">
@@ -61,21 +58,25 @@
                     <span>Global Branding</span>
                     <span aria-hidden="true">00</span>
                   </button>
+                  <button class="admin-page-link" type="button" data-admin-page="header" aria-pressed="false">
+                    <span>Header</span>
+                    <span aria-hidden="true">01</span>
+                  </button>
                   <button class="admin-page-link" type="button" data-admin-page="landing" aria-pressed="false">
                     <span>Landing Page</span>
-                    <span aria-hidden="true">01</span>
+                    <span aria-hidden="true">02</span>
                   </button>
                   <button class="admin-page-link" type="button" data-admin-page="services" aria-pressed="false">
                     <span>Services</span>
-                    <span aria-hidden="true">02</span>
+                    <span aria-hidden="true">03</span>
                   </button>
                   <button class="admin-page-link" type="button" data-admin-page="images" aria-pressed="false">
                     <span>Pictures</span>
-                    <span aria-hidden="true">03</span>
+                    <span aria-hidden="true">04</span>
                   </button>
                   <button class="admin-page-link" type="button" data-admin-page="footer" aria-pressed="false">
                     <span>Footer</span>
-                    <span aria-hidden="true">04</span>
+                    <span aria-hidden="true">05</span>
                   </button>
                 </div>
               </div>
@@ -88,13 +89,13 @@
                 <p class="admin-kicker">Site Content</p>
                 <h1>Content editor.</h1>
                 <p class="admin-panel__copy">
-                  This is the first admin screen. For now it is a clean front-end structure for editing page words, titles, images, captions, alt text, booking copy, and global branding.
+                  Edit page words, titles, images, captions, alt text, booking copy, global branding, and shared header/footer links.
                 </p>
               </div>
-              <span class="admin-status-pill">Draft only</span>
+              <span class="admin-status-pill" data-save-status>Draft only</span>
             </div>
 
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="#" method="post" enctype="multipart/form-data" data-admin-form>
               <div class="admin-content-page is-active" data-admin-content="global">
                 <section class="admin-section">
                   <h2>Global logo</h2>
@@ -158,6 +159,96 @@
                     <div class="admin-field admin-field--full">
                       <label for="site-mark-alt">Small mark alt text</label>
                       <input id="site-mark-alt" name="siteMarkAlt" type="text" value="Studio Sol brand mark" />
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="admin-content-page" data-admin-content="header">
+                <section class="admin-section">
+                  <h2>Header links</h2>
+                  <p class="admin-section__copy">
+                    These links appear in the public header. You can erase, edit, or add header links up to a maximum of 12.
+                  </p>
+
+                  <div class="link-editor">
+                    <div class="link-editor__topline">
+                      <p class="link-editor__limit" data-header-link-count>6/12 header links</p>
+                      <button class="button button--ghost link-editor__add" type="button" data-add-header-link>Add Header Link</button>
+                    </div>
+
+                    <div class="link-editor__rows" data-header-link-list>
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="header-link-label-1">Label 1</label>
+                          <input id="header-link-label-1" name="headerLinkLabel1" type="text" value="Hair" data-link-label />
+                        </div>
+                        <div class="admin-field">
+                          <label for="header-link-url-1">Link 1</label>
+                          <input id="header-link-url-1" name="headerLinkUrl1" type="text" value="#hair" data-link-url />
+                        </div>
+                        <button class="button button--ghost" type="button" data-remove-header-link>Remove</button>
+                      </div>
+
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="header-link-label-2">Label 2</label>
+                          <input id="header-link-label-2" name="headerLinkLabel2" type="text" value="Nails" data-link-label />
+                        </div>
+                        <div class="admin-field">
+                          <label for="header-link-url-2">Link 2</label>
+                          <input id="header-link-url-2" name="headerLinkUrl2" type="text" value="#nails" data-link-url />
+                        </div>
+                        <button class="button button--ghost" type="button" data-remove-header-link>Remove</button>
+                      </div>
+
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="header-link-label-3">Label 3</label>
+                          <input id="header-link-label-3" name="headerLinkLabel3" type="text" value="Massage" data-link-label />
+                        </div>
+                        <div class="admin-field">
+                          <label for="header-link-url-3">Link 3</label>
+                          <input id="header-link-url-3" name="headerLinkUrl3" type="text" value="#massage" data-link-url />
+                        </div>
+                        <button class="button button--ghost" type="button" data-remove-header-link>Remove</button>
+                      </div>
+
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="header-link-label-4">Label 4</label>
+                          <input id="header-link-label-4" name="headerLinkLabel4" type="text" value="Brows" data-link-label />
+                        </div>
+                        <div class="admin-field">
+                          <label for="header-link-url-4">Link 4</label>
+                          <input id="header-link-url-4" name="headerLinkUrl4" type="text" value="#brows" data-link-url />
+                        </div>
+                        <button class="button button--ghost" type="button" data-remove-header-link>Remove</button>
+                      </div>
+
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="header-link-label-5">Label 5</label>
+                          <input id="header-link-label-5" name="headerLinkLabel5" type="text" value="Lashes" data-link-label />
+                        </div>
+                        <div class="admin-field">
+                          <label for="header-link-url-5">Link 5</label>
+                          <input id="header-link-url-5" name="headerLinkUrl5" type="text" value="#lashes" data-link-url />
+                        </div>
+                        <button class="button button--ghost" type="button" data-remove-header-link>Remove</button>
+                      </div>
+
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="header-link-label-6">Label 6</label>
+                          <input id="header-link-label-6" name="headerLinkLabel6" type="text" value="Bridal" data-link-label />
+                        </div>
+                        <div class="admin-field">
+                          <label for="header-link-url-6">Link 6</label>
+                          <input id="header-link-url-6" name="headerLinkUrl6" type="text" value="#bridal" data-link-url />
+                        </div>
+                        <button class="button button--ghost" type="button" data-remove-header-link>Remove</button>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -231,7 +322,7 @@
                 <section class="admin-section">
                   <h2>Service categories</h2>
                   <p class="admin-section__copy">
-                    These labels appear in the top navigation of the public site.
+                    These labels appear in the top navigation and booking category dropdown.
                   </p>
 
                   <div class="admin-form-grid">
@@ -268,7 +359,7 @@
 
                     <div class="admin-field admin-field--full">
                       <label for="booking-link">Booking link</label>
-                      <input id="booking-link" name="bookingLink" type="url" value="#book-balayage" />
+                      <input id="booking-link" name="bookingLink" type="url" value="/book-appointment/?category=Hair&service=Balayage" />
                     </div>
                   </div>
                 </section>
@@ -326,7 +417,7 @@
                 <section class="admin-section">
                   <h2>Footer content</h2>
                   <p class="admin-section__copy">
-                    Keep the footer simple and unobtrusive so it does not distract from booking.
+                    Footer content is editable, but the Admin link is locked because it is required for site access.
                   </p>
 
                   <div class="admin-form-grid">
@@ -334,15 +425,40 @@
                       <label for="footer-line">Footer line</label>
                       <input id="footer-line" name="footerLine" type="text" value="© Studio Sol. Concept by Mejor Tech." />
                     </div>
+                  </div>
+                </section>
 
-                    <div class="admin-field">
-                      <label for="admin-link-label">Admin link label</label>
-                      <input id="admin-link-label" name="adminLinkLabel" type="text" value="Admin" />
-                    </div>
+                <section class="admin-section">
+                  <h2>Footer links</h2>
+                  <p class="admin-section__copy">
+                    Edit footer labels and links. Admin is locked and cannot be deleted.
+                  </p>
 
-                    <div class="admin-field">
-                      <label for="desktop-link-label">Desktop view label</label>
-                      <input id="desktop-link-label" name="desktopLinkLabel" type="text" value="Desktop View" />
+                  <div class="link-editor">
+                    <div class="link-editor__rows">
+                      <div class="link-row">
+                        <div class="admin-field">
+                          <label for="footer-link-label-1">Label 1</label>
+                          <input id="footer-link-label-1" name="footerLinkLabel1" type="text" value="Desktop View" />
+                        </div>
+                        <div class="admin-field">
+                          <label for="footer-link-url-1">Link 1</label>
+                          <input id="footer-link-url-1" name="footerLinkUrl1" type="text" value="/admin/home/?view=desktop" />
+                        </div>
+                        <button class="button button--ghost" type="button">Remove</button>
+                      </div>
+
+                      <div class="link-row--locked">
+                        <div class="admin-field">
+                          <label for="footer-admin-label">Required label</label>
+                          <input id="footer-admin-label" name="footerAdminLabel" type="text" value="Admin" readonly />
+                        </div>
+                        <div class="admin-field">
+                          <label for="footer-admin-url">Required link</label>
+                          <input id="footer-admin-url" name="footerAdminUrl" type="text" value="/admin/sign-in/" readonly />
+                        </div>
+                        <span class="link-row__locked-pill">Locked</span>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -350,7 +466,7 @@
 
               <div class="admin-actions">
                 <button class="button button--ghost" type="button">Preview Changes</button>
-                <button class="button button--primary" type="submit">Save Draft</button>
+                <button class="button button--primary" type="submit">Save</button>
               </div>
             </form>
           </section>
