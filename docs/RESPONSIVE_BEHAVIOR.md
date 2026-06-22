@@ -6,6 +6,19 @@ This document defines how the salon website should behave across desktop, tablet
 
 The desktop and mobile versions use the same core idea, but they cannot use the exact same layout.
 
+## Approved Responsive References
+
+The approved responsive references are:
+
+- **Desktop Reference — `image.png`**: use for desktop/browser screens.
+- **Mobile Reference — `image_2.png`**: use for mobile/phone screens.
+
+Desktop must match the desktop reference.
+
+Mobile must match the mobile reference.
+
+The person shown in the references is temporary and will be replaced later. The layout and responsive behavior should remain locked to the references.
+
 ## Core Rule
 
 The site must feel like one brand across all devices, but the layout should adapt to how people actually use each screen size.
@@ -20,7 +33,7 @@ Recommended breakpoint:
 
 - 1024px and up
 
-Desktop uses a two-column layout.
+Desktop uses a two-column layout and should match **Desktop Reference — `image.png`**.
 
 ### Left Column
 
@@ -39,9 +52,10 @@ Contains:
 Contains:
 
 - Semi-circle service menu
-- Stylist/owner image
+- Full-body or three-quarter guide image
 - Service detail card
 - Active service highlight
+- Hover helper copy
 
 The right column is the interactive visual experience.
 
@@ -53,7 +67,7 @@ Required:
 
 - Hover over a service updates the active detail card.
 - Hover over a service updates the visual highlight.
-- Hover can update the stylist pose.
+- Hover can update the guide pose/image.
 - Keyboard focus must provide the same behavior as hover.
 - Click can also select/lock the service.
 
@@ -82,7 +96,7 @@ Recommended breakpoint:
 
 - Up to 767px
 
-Mobile uses a vertical funnel.
+Mobile uses a vertical funnel and should match **Mobile Reference — `image_2.png`**.
 
 Required order:
 
@@ -92,11 +106,11 @@ Required order:
 4. Primary and secondary CTA
 5. Featured service card
 6. Semi-circle service arc
-7. Half-body stylist portrait at the bottom
+7. Half-body / upper-torso guide image at the bottom
 
-The stylist should be anchored at the bottom of the visual section and point upward toward the selected service.
+The guide image should be anchored at the bottom of the visual section and point upward toward the selected service.
 
-The semi-circle should sit above the stylist, not beside the stylist.
+The semi-circle should sit above the guide image, not beside it.
 
 ## Mobile Interaction
 
@@ -109,7 +123,7 @@ Required:
 - Use a slight animation, color shift, size change, ring, or glow so the user knows the tap worked.
 - The service detail card updates after tap.
 - The booking CTA updates after tap.
-- The stylist pose can update after tap if multiple pose images exist.
+- The guide image can update after tap if multiple pose images exist.
 
 Suggested microcopy:
 
@@ -146,12 +160,12 @@ The pointing visual must remain accurate across screen sizes.
 Required:
 
 - Use CSS Grid or Flexbox for main layout.
-- Use a relative container for the arc and stylist image.
+- Use a relative container for the arc and guide image.
 - Use scalable positioning for service nodes.
 - Node positions should be calculated using percentages or angle-based coordinates.
 - Do not hard-code positions that only work for one mockup size.
 - The selected service should have a known target coordinate.
-- The stylist image and pointing pose should align with the selected service as the container scales.
+- The guide image and pointing pose should align with the selected service as the container scales.
 
 Acceptable implementation approaches:
 
@@ -163,21 +177,23 @@ Avoid:
 
 - Fixed pixel-only service positions
 - Different layouts that break the pointing illusion
-- A mobile crop that hides the stylist's pointing hand
+- A mobile crop that hides the pointing hand
 
 ## Image Cropping Rules
 
 Desktop:
 
-- Use full-body or three-quarter stylist image.
+- Use full-body or three-quarter guide image.
 - The pointing direction should clearly aim toward the selected service.
+- The visual should match the desktop reference.
 
 Mobile:
 
-- Use upper-torso / half-body stylist crop.
-- Stylist should sit at the bottom of the visual section.
+- Use upper-torso / half-body guide image.
+- Guide image should sit at the bottom of the visual section.
 - Pointing hand must remain visible.
 - Do not let the image push important content off screen.
+- The visual should match the mobile reference.
 
 ## Content Density Rules
 
@@ -202,6 +218,7 @@ Recommended:
 - Slight scale on active service node
 - Soft glow/ring on selected service
 - Smooth category change
+- Subtle mobile tap confirmation
 
 Avoid:
 
@@ -211,6 +228,18 @@ Avoid:
 - Motion that makes selection feel unstable
 
 Respect reduced motion preferences.
+
+## Performance Rules
+
+The design uses high-quality photography, so responsive image performance matters.
+
+Required:
+
+- Use WebP or AVIF when possible.
+- Use responsive image sizes.
+- Lazy-load non-critical images.
+- Avoid full-resolution image loading when a smaller crop is enough.
+- Preserve the premium look while keeping load times fast.
 
 ## Testing Checklist
 
@@ -226,9 +255,11 @@ Test at:
 
 Confirm:
 
+- Desktop matches `image.png`.
+- Mobile matches `image_2.png`.
 - Icons do not overlap.
 - Labels remain readable.
 - Tap areas are usable.
 - Active state is clear.
-- Stylist pointing still visually lands near the selected icon.
+- Pointing still visually lands near the selected icon.
 - Booking button remains easy to find.
