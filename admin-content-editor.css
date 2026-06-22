@@ -69,6 +69,80 @@
   padding-inline: 18px;
 }
 
+.booking-menu-builder,
+.business-hours-editor {
+  display: grid;
+  gap: 14px;
+}
+
+.booking-category-card,
+.hours-row {
+  padding: 16px;
+  border: 1px solid rgba(234, 219, 209, 0.92);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.booking-category-card {
+  display: grid;
+  gap: 14px;
+}
+
+.booking-category-card__top {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.service-option-list {
+  display: grid;
+  gap: 10px;
+}
+
+.service-option-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.booking-category-card .button,
+.service-option-row .button {
+  min-height: 44px;
+  padding-inline: 16px;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.8fr) repeat(2, minmax(120px, 1fr)) auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.hours-row__day {
+  margin: 0 0 10px;
+  color: var(--color-text);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.hours-closed-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.hours-closed-toggle input {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-accent);
+}
+
 @media (max-width: 900px) {
   .link-editor__topline {
     align-items: flex-start;
@@ -76,13 +150,18 @@
   }
 
   .link-row,
-  .link-row--locked {
+  .link-row--locked,
+  .booking-category-card__top,
+  .service-option-row,
+  .hours-row {
     grid-template-columns: 1fr;
     align-items: stretch;
   }
 
   .link-row .button,
-  .link-editor__add {
+  .link-editor__add,
+  .booking-category-card .button,
+  .service-option-row .button {
     width: 100%;
   }
 
@@ -102,6 +181,23 @@ html.pc-view .link-row--locked {
 }
 
 html.pc-view .link-row .button,
-html.pc-view .link-editor__add {
+html.pc-view .link-editor__add,
+html.pc-view .booking-category-card .button,
+html.pc-view .service-option-row .button {
   width: auto;
+}
+
+html.pc-view .booking-category-card__top {
+  grid-template-columns: minmax(160px, 1fr) auto;
+  align-items: end;
+}
+
+html.pc-view .service-option-row {
+  grid-template-columns: minmax(180px, 1fr) auto;
+  align-items: end;
+}
+
+html.pc-view .hours-row {
+  grid-template-columns: minmax(110px, 0.8fr) repeat(2, minmax(120px, 1fr)) auto;
+  align-items: end;
 }
