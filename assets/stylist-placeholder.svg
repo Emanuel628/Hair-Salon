@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 690" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Temporary stylist placeholder</title>
+  <desc id="desc">A temporary full-body stylist illustration pointing toward the selected service. This will be replaced with real photography later.</desc>
+  <defs>
+    <linearGradient id="hair" x1="120" y1="70" x2="260" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2d211e"/>
+      <stop offset=".55" stop-color="#5b3327"/>
+      <stop offset="1" stop-color="#b26b42"/>
+    </linearGradient>
+    <linearGradient id="pants" x1="120" y1="345" x2="260" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ecd7c3"/>
+      <stop offset="1" stop-color="#caa88e"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-10%" width="140%" height="130%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="12" flood-color="#4a2d21" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <path d="M163 151c-50 20-78 74-71 133 3 32 11 54 8 84-4 37-23 65-23 65s50 9 79-22c26-28 32-68 30-113-2-39 9-68 25-89 15-19 9-73-48-58z" fill="url(#hair)"/>
+    <path d="M224 154c42 22 61 65 58 112-2 37-18 62-13 100 5 39 30 60 30 60s-52 16-83-17c-29-31-32-81-25-121 6-36-6-66-22-82-24-24 2-78 55-52z" fill="url(#hair)"/>
+
+    <path d="M167 142c-15 22-14 56 2 76 15 19 43 21 61 2 20-21 21-58 5-82-18-27-51-24-68 4z" fill="#d9a47f"/>
+    <path d="M160 162c10-45 53-60 82-27 2 28-20 45-54 43-13-1-22-6-28-16z" fill="url(#hair)"/>
+    <path d="M187 214v42h43v-45c-13 12-29 13-43 3z" fill="#d69b75"/>
+
+    <path d="M126 268c12-31 36-47 82-47 45 0 73 17 88 48l-30 181H151L126 268z" fill="#171514"/>
+    <path d="M138 263c-35 26-54 72-58 142l38 4c12-54 28-87 47-103l-27-43z" fill="#191716"/>
+    <path d="M274 258c22 5 48 17 75 39 18 15 34 32 51 51l-26 28c-35-34-67-55-96-65l-4-53z" fill="#191716"/>
+    <path d="M374 376c13 1 22-7 26-20 3-11-3-23-12-30-6 9-14 17-24 23 0 13 4 22 10 27z" fill="#d9a47f"/>
+    <path d="M392 334l11-32" stroke="#d9a47f" stroke-width="10" stroke-linecap="round"/>
+    <path d="M404 303l-2-32" stroke="#d9a47f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M392 309l-12-18" stroke="#d9a47f" stroke-width="7" stroke-linecap="round"/>
+    <path d="M391 316l-16-12" stroke="#d9a47f" stroke-width="6" stroke-linecap="round"/>
+
+    <path d="M150 432c-12 92-24 166-42 232h69c19-78 29-153 32-232h-59z" fill="url(#pants)"/>
+    <path d="M213 432c6 87 19 162 41 232h68c-19-70-34-148-45-232h-64z" fill="url(#pants)"/>
+    <path d="M137 430h151c4 26 4 42-2 50H142c-9-10-11-27-5-50z" fill="#dfc1a7"/>
+    <path d="M109 664h72c5 12 1 20-12 24H98c-6-9-2-17 11-24z" fill="#fffaf4"/>
+    <path d="M254 664h72c8 11 4 19-11 24h-68c-8-10-6-18 7-24z" fill="#fffaf4"/>
+
+    <path d="M145 286c30 16 62 18 97 4" stroke="#403734" stroke-opacity=".35" stroke-width="3"/>
+    <path d="M186 244c10 11 25 11 42 0" stroke="#bd735f" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  </g>
+</svg>
