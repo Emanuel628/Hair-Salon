@@ -109,7 +109,9 @@ bookingForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (bookingStatus) {
-    bookingStatus.textContent = "Appointment request ready";
+    bookingStatus.textContent = "Appointment request received. Redirecting...";
     bookingStatus.classList.add("is-ready");
   }
+
+  window.location.href = "/book-appointment/success/";
 });
