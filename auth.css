@@ -96,13 +96,13 @@ body.auth-page {
   text-align: left;
 }
 
-.form-field label {
+.form-field label:not(.show-password) {
   color: var(--color-text);
   font-size: 0.88rem;
   font-weight: 700;
 }
 
-.form-field input {
+.form-field input:not([type="checkbox"]) {
   width: 100%;
   min-height: 54px;
   padding: 0 16px;
@@ -114,11 +114,11 @@ body.auth-page {
   transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-.form-field input::placeholder {
+.form-field input:not([type="checkbox"])::placeholder {
   color: rgba(109, 98, 93, 0.58);
 }
 
-.form-field input:focus {
+.form-field input:not([type="checkbox"]):focus {
   outline: none;
   border-color: rgba(189, 115, 95, 0.8);
   background: #fffdf9;
@@ -133,26 +133,45 @@ body.auth-page {
 }
 
 .password-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  display: contents;
 }
 
 .show-password {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: flex-start;
+  justify-self: start;
+  gap: 7px;
+  margin: 0;
   color: var(--color-muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   line-height: 1;
+  cursor: pointer;
   user-select: none;
 }
 
-.show-password input {
-  width: 14px;
-  height: 14px;
+.show-password input[type="checkbox"] {
+  appearance: auto;
+  flex: 0 0 13px;
+  width: 13px;
+  height: 13px;
+  min-width: 13px;
+  min-height: 13px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  box-shadow: none;
   accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.show-password input[type="checkbox"]:focus-visible {
+  outline: 2px solid rgba(189, 115, 95, 0.52);
+  outline-offset: 2px;
 }
 
 .auth-submit {
