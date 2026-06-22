@@ -1,0 +1,79 @@
+.reviews-editor {
+  display: grid;
+  gap: 14px;
+}
+
+.reviews-editor__topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.reviews-editor__visibility {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.reviews-editor__visibility input {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-accent);
+}
+
+.review-edit-list {
+  display: grid;
+  gap: 12px;
+}
+
+.review-edit-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(130px, 0.34fr) auto;
+  gap: 12px;
+  align-items: end;
+  padding: 14px;
+  border: 1px solid rgba(234, 219, 209, 0.92);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.review-edit-row .admin-field textarea {
+  min-height: 86px;
+}
+
+.review-edit-row .button,
+.reviews-editor__add {
+  min-height: 44px;
+  padding-inline: 16px;
+}
+
+@media (max-width: 900px) {
+  .reviews-editor__topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .review-edit-row {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .review-edit-row .button,
+  .reviews-editor__add {
+    width: 100%;
+  }
+}
+
+html.pc-view .review-edit-row {
+  grid-template-columns: minmax(0, 1fr) minmax(130px, 0.34fr) auto;
+  align-items: end;
+}
+
+html.pc-view .review-edit-row .button,
+html.pc-view .reviews-editor__add {
+  width: auto;
+}
