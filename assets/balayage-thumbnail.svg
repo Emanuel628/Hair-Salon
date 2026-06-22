@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Balayage hair thumbnail placeholder</title>
+  <desc id="desc">A warm placeholder image showing dimensional brunette balayage waves.</desc>
+  <rect width="220" height="220" rx="26" fill="#f2dfd2"/>
+  <rect x="16" y="14" width="188" height="192" rx="22" fill="url(#bg)"/>
+  <path d="M68 20c-31 30-40 68-24 114 9 25 6 48-8 69h42c17-27 22-57 11-90C78 79 85 51 110 28 98 20 83 17 68 20z" fill="#211715"/>
+  <path d="M112 18c44 29 59 69 44 120-8 27-5 49 10 65h-48c-15-27-17-56-5-88 12-33 7-62-15-88 4-4 9-7 14-9z" fill="#31201c"/>
+  <path d="M78 36c-20 34-20 70 1 108 10 18 11 36 3 55" stroke="#b86f42" stroke-width="9" stroke-linecap="round" opacity=".82"/>
+  <path d="M112 35c-18 35-17 69 3 104 12 21 13 41 3 61" stroke="#d89a5c" stroke-width="10" stroke-linecap="round" opacity=".82"/>
+  <path d="M143 42c-17 38-15 70 6 98 12 17 15 36 8 58" stroke="#c37b48" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+  <path d="M58 82c26 21 64 22 112 3" stroke="#f0c39a" stroke-width="6" stroke-linecap="round" opacity=".52"/>
+  <path d="M52 134c34 26 82 25 126-2" stroke="#f4d1ad" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+  <defs>
+    <linearGradient id="bg" x1="16" x2="204" y1="14" y2="206" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff7ee"/>
+      <stop offset="1" stop-color="#dfb39f"/>
+    </linearGradient>
+  </defs>
+</svg>
