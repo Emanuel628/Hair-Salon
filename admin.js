@@ -12,3 +12,14 @@ document.querySelectorAll("[data-admin-page]").forEach((button) => {
     });
   });
 });
+
+const adminForm = document.querySelector("[data-admin-form]");
+const saveStatus = document.querySelector("[data-save-status]");
+
+if (adminForm && saveStatus) {
+  adminForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    saveStatus.textContent = "Saved";
+    saveStatus.classList.add("is-saved");
+  });
+}
