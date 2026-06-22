@@ -1,0 +1,24 @@
+.booking-title {
+  line-height: 1;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .booking-title {
+    max-width: 100%;
+    font-size: clamp(3.55rem, 14.4vw, 4.85rem);
+    line-height: 1.03;
+    letter-spacing: -0.055em;
+  }
+
+  .booking-rule {
+    margin-top: 26px;
+  }
+}
+
+html.pc-view .booking-title {
+  max-width: 520px;
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  line-height: 0.95;
+}
