@@ -8,6 +8,17 @@ This project explores a more memorable and conversion-focused website experience
 
 Most salon websites are simple booking pages with a gallery, a list of services, and a button. This concept is different: it turns the stylist into the guide, makes services easy to understand, and funnels visitors toward booking without overwhelming them.
 
+## Visual Reference Lock
+
+The approved mockups are the source of truth for the build.
+
+- **Desktop Reference — `image.png`**: use for the desktop/browser layout.
+- **Mobile Reference — `image_2.png`**: use for the mobile/phone layout.
+
+The finished site should look as close as possible to the approved reference images.
+
+The model/stylist shown in the mockups is temporary and will be replaced later. The layout, spacing, color palette, typography hierarchy, service arc behavior, and desktop/mobile structure should remain locked unless intentionally changed.
+
 ## Core Idea
 
 The landing page uses an interactive service semi-circle.
@@ -51,6 +62,14 @@ The desktop layout does not directly translate to mobile, so the mobile version 
 5. Half-body stylist portrait at the bottom pointing upward toward the selected service
 
 Mobile interactions are tap-based instead of hover-based.
+
+## Technical Layout Requirement
+
+The service arc and pointing visual must be responsive.
+
+Use a flexible layout system such as CSS Grid, Flexbox, SVG, or absolute positioning inside a scalable relative container. The service icons, dots, stylist image, and pointing direction must stay aligned across screen sizes and resolutions.
+
+Do not hard-code positions that only work on one desktop or phone size.
 
 ## Why This Works
 
@@ -106,9 +125,15 @@ Recommended starting stack:
 
 See the `/docs` folder for deeper planning:
 
+- `VISUAL_REFERENCE.md` — approved desktop/mobile mockup rules and visual source of truth
 - `PROJECT_BRIEF.md` — product vision and business purpose
 - `UX_CONCEPT.md` — desktop and mobile interaction rules
 - `BUILD_PLAN.md` — phased implementation plan
+- `DESIGN_SYSTEM.md` — style, layout, photography, and performance rules
+- `RESPONSIVE_BEHAVIOR.md` — desktop/tablet/mobile behavior
+- `SERVICE_DATA_MODEL.md` — service/category data structure
+- `COMPONENT_ARCHITECTURE.md` — recommended React component structure
+- `MVP_SCOPE.md` — what V1 should and should not include
 - `COPY_DIRECTION.md` — brand voice and sample copy
 
 ## Mejor Tech Positioning
