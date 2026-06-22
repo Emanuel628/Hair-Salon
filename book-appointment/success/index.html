@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Studio Sol appointment request confirmation." />
+    <title>Appointment Requested | Studio Sol</title>
+
+    <script>
+      if (new URLSearchParams(window.location.search).get("view") === "desktop") {
+        document.documentElement.classList.add("pc-view");
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/book-appointment.css" />
+    <script src="/book-appointment-success.js" defer></script>
+  </head>
+
+  <body class="booking-page">
+    <div class="booking-shell">
+      <header class="booking-header" aria-label="Booking success navigation">
+        <a class="brand" href="/" aria-label="Back to Studio Sol home">
+          <img src="/assets/studio-sol-mark.svg" alt="" class="brand__mark" />
+          <span class="brand__name">Studio Sol</span>
+        </a>
+      </header>
+
+      <main class="booking-main" aria-labelledby="success-title">
+        <div class="booking-layout">
+          <section class="booking-copy">
+            <p class="booking-kicker">Request Sent</p>
+            <h1 id="success-title" class="booking-title">You’re on the list.</h1>
+            <div class="booking-rule" aria-hidden="true"></div>
+            <p>
+              Your appointment request has been received. The salon will confirm the exact time and service details.
+            </p>
+
+            <aside class="booking-note-card" aria-label="Redirect note">
+              <strong>Redirecting shortly</strong>
+              You’ll return to the home page in <span data-countdown>10</span> seconds.
+            </aside>
+          </section>
+
+          <section class="booking-card" aria-label="Appointment success message">
+            <p class="booking-kicker">Success</p>
+            <h2>Appointment requested.</h2>
+            <p class="booking-card__intro">
+              Thanks for reaching out. This page is momentary so the experience feels complete without trapping the client here.
+            </p>
+
+            <div class="booking-note-card booking-note-card--success" aria-label="Confirmation details">
+              <strong>What happens next?</strong>
+              The salon reviews the request, checks availability, and follows up using the email or phone number provided.
+            </div>
+
+            <a class="button button--primary booking-submit" href="/">Back Home Now</a>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer booking-footer">
+        <p>© Studio Sol. Concept by Mejor Tech.</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="/book-appointment/success/?view=desktop">Desktop View</a>
+          <a href="/admin/sign-in/">Admin</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
