@@ -7,7 +7,7 @@
 
 .calibration-viewer {
   position: relative;
-  min-height: 520px;
+  min-height: 600px;
   overflow: hidden;
   border: 1px solid rgba(234, 219, 209, 0.92);
   border-radius: 24px;
@@ -37,10 +37,10 @@
 
 .calibration-model {
   position: absolute;
-  left: 29%;
-  bottom: -8px;
+  left: 31%;
+  bottom: 0;
   z-index: 4;
-  width: min(42%, 250px);
+  width: min(37%, 230px);
   aspect-ratio: 410 / 690;
   transform: translateX(-50%);
   pointer-events: none;
@@ -230,11 +230,12 @@
   }
 
   .calibration-viewer {
-    min-height: 430px;
+    min-height: 500px;
   }
 
   .calibration-model {
-    width: min(46%, 210px);
+    left: 31%;
+    width: min(40%, 190px);
   }
 
   .calibration-control-grid {
@@ -247,7 +248,7 @@ html.pc-view .calibration-shell {
 }
 
 html.pc-view .calibration-viewer {
-  min-height: 520px;
+  min-height: 600px;
 }
 
 html.pc-view .calibration-control-grid {
