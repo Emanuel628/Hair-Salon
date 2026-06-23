@@ -82,8 +82,8 @@ html.pc-view .button--small {
 }
 
 html.pc-view .landing-grid {
-  height: calc(100vh - 104px - 48px);
-  min-height: 620px;
+  height: max(760px, calc(100vh - 104px - 48px));
+  min-height: 760px;
   display: grid;
   grid-template-columns: minmax(0, 41.4%) minmax(0, 58.6%);
   grid-template-areas: "copy visual";
@@ -179,7 +179,7 @@ html.pc-view .visual-stage--desktop {
   display: block;
   width: 100%;
   min-height: 100%;
-  height: calc(100vh - 104px - 48px);
+  height: max(760px, calc(100vh - 104px - 48px));
   overflow: hidden;
   container-type: inline-size;
 }
@@ -189,10 +189,18 @@ html.pc-view .mobile-arc-stage {
 }
 
 html.pc-view .model-composite--desktop {
-  left: 35%;
+  left: 31%;
   transform: translateX(-50%);
   bottom: 0;
-  width: clamp(330px, 46cqw, 480px);
+  width: clamp(270px, 37cqw, 395px);
+}
+
+html.pc-view .model-composite--desktop .model-arm {
+  left: 51.5%;
+  top: 31.5%;
+  width: 62%;
+  height: 9%;
+  transform-origin: 8% 50%;
 }
 
 html.pc-view .service-arc {
@@ -202,14 +210,15 @@ html.pc-view .service-arc {
 }
 
 html.pc-view .service-card {
-  left: 46%;
-  top: 48%;
+  left: 45%;
+  top: 49%;
   transform: translate(-50%, -50%);
-  width: clamp(215px, 24cqw, 285px);
+  width: clamp(210px, 22cqw, 270px);
 }
 
 html.pc-view .hover-note {
   display: block;
+  right: clamp(16px, 3cqw, 42px);
 }
 
 html.pc-view .site-footer {
@@ -221,85 +230,25 @@ html.pc-view .site-footer {
   font-size: 0.82rem;
 }
 
-/* Admin auth PC view */
-html.pc-view body.auth-page {
-  min-width: 1440px;
-  background:
-    radial-gradient(circle at 24% 20%, rgba(255, 255, 255, 0.98), transparent 32%),
-    radial-gradient(circle at 78% 42%, rgba(223, 179, 165, 0.18), transparent 34%),
-    linear-gradient(135deg, #fffdf9 0%, #fbf7f1 48%, #f4e9df 100%);
+html.pc-view .site-footer p,
+html.pc-view .footer-links {
+  width: auto;
 }
 
-html.pc-view .auth-shell {
-  width: 1440px;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 104px 1fr 48px;
-}
-
-html.pc-view .auth-header {
-  min-height: 104px;
-  height: 104px;
+html.pc-view .footer-links {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 70px;
-  border-bottom: 1px solid rgba(221, 202, 190, 0.58);
-  background: rgba(255, 253, 249, 0.86);
+  gap: 22px;
 }
 
-html.pc-view .auth-header::after {
-  content: none;
-  display: none;
+html.pc-view .visual-column .service-node {
+  display: block;
 }
 
-html.pc-view .auth-header .brand__mark {
-  width: 48px;
-}
-
-html.pc-view .auth-header .brand__name {
-  font-size: clamp(2.05rem, 2.5vw, 3rem);
-}
-
-html.pc-view .auth-main {
-  display: grid;
-  place-items: center;
-  align-items: center;
-  padding: 70px 22px;
-}
-
-html.pc-view .auth-card {
-  width: min(100%, 440px);
-  padding: 42px;
-  border-radius: 24px;
-}
-
-html.pc-view .auth-card--register {
-  width: min(100%, 560px);
-}
-
-html.pc-view .auth-title {
-  font-size: 4.1rem;
-}
-
-html.pc-view .auth-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-html.pc-view .auth-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-html.pc-view .auth-footer {
-  min-height: 48px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding: 0 70px;
-  font-size: 0.82rem;
+html.pc-view .visual-stage--desktop .service-card,
+html.pc-view .visual-stage--desktop .service-arc,
+html.pc-view .visual-stage--desktop .service-node,
+html.pc-view .visual-stage--desktop .hover-note,
+html.pc-view .visual-stage--desktop .salon-backdrop,
+html.pc-view .visual-stage--desktop .model-composite--desktop {
+  visibility: visible;
 }
